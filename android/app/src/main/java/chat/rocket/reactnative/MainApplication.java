@@ -35,9 +35,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
+      packages.add(new WhiteLabelConfigPackage());
       packages.add(new RNCViewPagerPackage());
       packages.add(new SSLPinningPackage());
-      List<ReactPackage> unimodules = Arrays.<ReactPackage>asList(
+      List<ReactPackage> unimodules = Arrays.asList(
         new ModuleRegistryAdapter(mModuleRegistryProvider)
       );
       packages.addAll(unimodules);
