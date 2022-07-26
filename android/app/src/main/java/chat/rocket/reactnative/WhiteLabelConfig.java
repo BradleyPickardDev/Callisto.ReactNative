@@ -12,6 +12,7 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
 
     @Nonnull
     private final String appName;
+    private final String serverPlaceHolder;
 
     public WhiteLabelConfig(@Nonnull ReactApplicationContext reactContext) {
         super(reactContext);
@@ -19,7 +20,12 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
         this.appName = reactContext
                 .getApplicationContext()
                 .getResources()
-                .getString(R.string.app_name);
+                .getString(R.string.str_jovian_app);
+
+        this.serverPlaceHolder = reactContext
+                .getApplicationContext()
+                .getResources()
+                .getString(R.string.str_server_url_placeholder);
     }
 
     @NonNull
@@ -43,6 +49,13 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
     @Nonnull
     @ReactMethod(isBlockingSynchronousMethod = true)
     public String getLogoPath() {
-        return "../../../android/app/src/callisto/res/drawable-xxhdpi/logo.png";
+        return "logo";
+//        return "android/app/src/callisto/res/drawable/logo.png";
+    }
+
+    @Nonnull
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    public String getServerPlaceHolder() {
+        return serverPlaceHolder;
     }
 }

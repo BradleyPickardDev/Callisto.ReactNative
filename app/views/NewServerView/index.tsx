@@ -329,8 +329,9 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								height: verticalScale({ size: 100, height })
 							}
 						]}
-						source={require('../../static/images/logo.png')}
-						// source={require({whiteLabelConfig.APP_LOGO_PATH})}
+						// source={require('../../static/images/logo.png')}
+						// source={require('../../../android/app/src/callisto/res/drawable/logo.png')}
+						source={{ uri: whiteLabelConfig.APP_LOGO_PATH }}
 						fadeDuration={0}
 					/>
 					<Text
