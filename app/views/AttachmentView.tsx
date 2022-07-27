@@ -25,6 +25,7 @@ import { withDimensions } from '../dimensions';
 import StatusBar from '../containers/StatusBar';
 import { InsideStackParamList } from '../stacks/types';
 import { IApplicationState, IUser, IAttachment } from '../definitions';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	container: {
@@ -124,7 +125,7 @@ class AttachmentView extends React.Component<IAttachmentViewProps, IAttachmentVi
 		if (isAndroid) {
 			const rationale = {
 				title: I18n.t('Write_External_Permission'),
-				message: I18n.t('Write_External_Permission_Message'),
+				message: I18n.t('Write_External_Permission_Message', { clientName: whiteLabelConfig.CLIENT_NAME }),
 				buttonPositive: 'Ok'
 			};
 			const result = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE, rationale);

@@ -20,6 +20,7 @@ import log, { events, logEvent } from '../lib/methods/helpers/log';
 import openLink from '../lib/methods/helpers/openLink';
 import sharedStyles from './Styles';
 import { Services } from '../lib/services';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	title: {
@@ -308,7 +309,7 @@ class RegisterView extends React.Component<IProps, any> {
 
 					<View style={styles.bottomContainer}>
 						<Text style={[styles.bottomContainerText, { color: themes[theme].auxiliaryText }]}>
-							{`${I18n.t('Onboarding_agree_terms')}\n`}
+							{`${I18n.t('Onboarding_agree_terms', { clientName: whiteLabelConfig.CLIENT_NAME })}\n`}
 							<Text
 								style={[styles.bottomContainerTextBold, { color: themes[theme].actionTintColor }]}
 								onPress={() => this.openContract('terms-of-service')}>

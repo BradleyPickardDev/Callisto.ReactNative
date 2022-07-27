@@ -7,6 +7,7 @@ import sharedStyles from './Styles';
 import I18n from '../i18n';
 import { themes } from '../lib/constants';
 import { TSupportedThemes, withTheme } from '../theme';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	container: {
@@ -42,7 +43,9 @@ class WithoutServerView extends React.Component<IWithoutServerViewProps> {
 			<View style={[styles.container, { backgroundColor: themes[theme].backgroundColor }]}>
 				<Text style={[styles.title, { color: themes[theme].titleText }]}>{I18n.t('Without_Servers')}</Text>
 				<Text style={[styles.content, { color: themes[theme].titleText }]}>
-					{I18n.t('You_need_to_access_at_least_one_RocketChat_server_to_share_something')}
+					{I18n.t('You_need_to_access_at_least_one_RocketChat_server_to_share_something', {
+						clientName: whiteLabelConfig.CLIENT_NAME
+					})}
 				</Text>
 			</View>
 		);

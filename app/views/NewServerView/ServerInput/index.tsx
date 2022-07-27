@@ -8,6 +8,7 @@ import I18n from '../../../i18n';
 import { TServerHistoryModel } from '../../../definitions';
 import Item from './Item';
 import { TSupportedThemes } from '../../../theme';
+import whiteLabelConfig from '../../../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	container: {
@@ -52,7 +53,7 @@ const ServerInput = ({
 		<View style={styles.container}>
 			<FormTextInput
 				label={I18n.t('Enter_workspace_URL')}
-				placeholder={I18n.t('Workspace_URL_Example')}
+				placeholder={whiteLabelConfig.SERVER_PLACEHOLDER}
 				containerStyle={styles.inputContainer}
 				value={text}
 				returnKeyType='send'

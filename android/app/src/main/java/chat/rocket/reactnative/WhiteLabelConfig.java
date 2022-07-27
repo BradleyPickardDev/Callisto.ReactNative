@@ -12,6 +12,7 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
 
     @Nonnull
     private final String appName;
+    private final String clientName;
     private final String serverPlaceHolder;
 
     public WhiteLabelConfig(@Nonnull ReactApplicationContext reactContext) {
@@ -21,6 +22,11 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
                 .getApplicationContext()
                 .getResources()
                 .getString(R.string.str_jovian_app);
+
+        this.clientName = reactContext
+                .getApplicationContext()
+                .getResources()
+                .getString(R.string.client_name);
 
         this.serverPlaceHolder = reactContext
                 .getApplicationContext()
@@ -57,5 +63,11 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
     @ReactMethod(isBlockingSynchronousMethod = true)
     public String getServerPlaceHolder() {
         return serverPlaceHolder;
+    }
+
+    @Nonnull
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    public String getClientName() {
+        return clientName;
     }
 }
