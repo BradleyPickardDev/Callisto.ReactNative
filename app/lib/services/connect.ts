@@ -394,7 +394,7 @@ async function getServerInfo(server: string) {
 			if (!jsonRes?.success) {
 				return {
 					success: false,
-					message: I18n.t('Not_RC_Server', { clientName: '', contact: I18n.t('Contact_your_server_admin') })
+					message: I18n.t('Not_RC_Server', { contact: I18n.t('Contact_your_server_admin') })
 				};
 			}
 			if (compareServerVersion(jsonRes.version, 'lowerThan', MIN_ROCKETCHAT_VERSION)) {

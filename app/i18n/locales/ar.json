@@ -343,7 +343,7 @@
   "No_Reactions": "لا تفاعل",
   "No_Read_Receipts": "لا إيصالات قراءة",
   "Not_logged": "غير مسجل الدخول",
-  "Not_RC_Server": "هذا ليس بخادم {{clientName}}.\n{{contact}}",
+  "Not_RC_Server": "هذا ليس بخادم.\n{{contact}}",
   "Nothing": "لا شيء",
   "Nothing_to_save": "لا شيء للحفظ!",
   "Notify_active_in_this_room": "أبلغ المستخدمين النشطين في هذه الغرفة",

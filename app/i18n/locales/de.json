@@ -348,7 +348,7 @@
   "No_Reactions": "Keine Reaktionen",
   "No_Read_Receipts": "Keine Lesebestätigungen",
   "Not_logged": "Nicht protokolliert",
-  "Not_RC_Server": "Dies ist kein {{clientName}}-Server.\n{{contact}}",
+  "Not_RC_Server": "Dies ist kein Server.\n{{contact}}",
   "Nothing": "Nichts",
   "Nothing_to_save": "Nichts zu speichern!",
   "Notify_active_in_this_room": "Aktive Benutzer in diesem Room benachrichtigen",

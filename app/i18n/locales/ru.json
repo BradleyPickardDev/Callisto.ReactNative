@@ -348,7 +348,7 @@
   "No_Reactions": "Нет реакций",
   "No_Read_Receipts": "Нет информации о прочтении",
   "Not_logged": "Не зарегистрирован",
-  "Not_RC_Server": "Это не сервер {{clientName}}.\n{{contact}}",
+  "Not_RC_Server": "Это не сервер .\n{{contact}}",
   "Nothing": "Ничего",
   "Nothing_to_save": "Нечего сохранять!",
   "Notify_active_in_this_room": "Уведомить всех активных пользователей в этом чате",

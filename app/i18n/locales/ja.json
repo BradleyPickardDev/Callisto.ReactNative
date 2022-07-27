@@ -343,7 +343,7 @@
   "No_Reactions": "リアクションなし",
   "No_Read_Receipts": "未読通知はありません",
   "Not_logged": "ログされていません",
-  "Not_RC_Server": "{{clientName}}サーバーではありません。\n{{contact}}",
+  "Not_RC_Server": "サーバーではありません。\n{{contact}}",
   "Nothing": "何もなし",
   "Nothing_to_save": "保存するものはありません！",
   "Notify_active_in_this_room": "このルームのアクティブなユーザーに通知する",

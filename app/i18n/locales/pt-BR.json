@@ -339,7 +339,7 @@
   "No_Message": "Não há mensagens",
   "No_messages_yet": "Não há mensagens ainda",
   "No_Reactions": "Sem reações",
-  "Not_RC_Server": "Este não é um servidor {{clientName}}.\n{{contact}}",
+  "Not_RC_Server": "Este não é um servidor .\n{{contact}}",
   "Nothing": "Nada",
   "Nothing_to_save": "Nada para salvar!",
   "Notify_active_in_this_room": "Notificar usuários ativos nesta sala",

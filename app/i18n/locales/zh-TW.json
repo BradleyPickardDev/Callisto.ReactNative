@@ -337,7 +337,7 @@
   "No_Reactions": "沒有表情貼",
   "No_Read_Receipts": "沒有已讀人員",
   "Not_logged": "沒有記錄",
-  "Not_RC_Server": "這不是一個 {{clientName}} server.\\n{{contact}}",
+  "Not_RC_Server": "這不是一個  server.\\n{{contact}}",
   "Nothing": "無",
   "Nothing_to_save": "沒有東西可儲存！",
   "Notify_active_in_this_room": "通知這個聊天室的活躍使用者",

@@ -352,7 +352,7 @@
   "No_Reactions": "Geen reacties",
   "No_Read_Receipts": "Geen leesbevestigingen",
   "Not_logged": "Niet ingelogd",
-  "Not_RC_Server": "Dit is geen {{clientName}}-server.\n{{contact}}",
+  "Not_RC_Server": "Dit is geen -server.\n{{contact}}",
   "Nothing": "Niets",
   "Nothing_to_save": "Niets om op te slaan!",
   "Notify_active_in_this_room": "Waarschuw actieve gebruikers in deze kamer",

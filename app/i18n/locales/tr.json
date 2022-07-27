@@ -338,7 +338,7 @@
   "No_Reactions": "Tepki Yok",
   "No_Read_Receipts": "Okundu Bilgisi Yok",
   "Not_logged": "Kayıtlı değil",
-  "Not_RC_Server": "Bu bir {{clientName}} sunucusu değil.\n{{contact}}",
+  "Not_RC_Server": "Bu bir  sunucusu değil.\n{{contact}}",
   "Nothing": "Hiçbir Şey",
   "Nothing_to_save": "Kaydedilecek bir şey yok!",
   "Notify_active_in_this_room": "Bu odadaki çevrimiçi kullanıcıları bilgilendir",
