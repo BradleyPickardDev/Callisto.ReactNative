@@ -33,7 +33,7 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getServerPlaceHolder) {
 
 
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getClientName) {
-  return NSLocalizedString(@"clientName ", @"App name");
+  return NSLocalizedString(@"clientName", @"App name");
 }
 
 @end
