@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1220"
+   LastUpgradeVersion = "1340"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "#!/bin/bash&#10;&#10;buildID=${PRODUCT_BUNDLE_IDENTIFIER}&#10;extId=&quot;notification-service&quot; //extension name&#10;&#10;/usr/libexec/PlistBuddy -c &quot;Set :CFBundleIdentifier $buildID.$extId&quot; &quot;${SRCROOT}/${extId}/Info.plist&quot;&#10;">
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -23,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-               BuildableName = "Rocket.Chat.app"
-               BlueprintName = "Rocket.Chat"
+               BlueprintIdentifier = "829D28132891856700E23152"
+               BuildableName = "Callisto.app"
+               BlueprintName = "Callisto"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -53,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-            BuildableName = "Rocket.Chat.app"
-            BlueprintName = "Rocket.Chat"
+            BlueprintIdentifier = "829D28132891856700E23152"
+            BuildableName = "Callisto.app"
+            BlueprintName = "Callisto"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7AAB3E0D257E6A6E00707CF6"
-            BuildableName = "Rocket.Chat.app"
-            BlueprintName = "Rocket.Chat"
+            BlueprintIdentifier = "829D28132891856700E23152"
+            BuildableName = "Callisto.app"
+            BlueprintName = "Callisto"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

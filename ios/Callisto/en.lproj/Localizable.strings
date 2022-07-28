@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  RocketChatRN
+
+  Created by Abdul Rahman Majeed on 28/07/2022.
+  Copyright © 2022 Facebook. All rights reserved.
+*/
+"clientName" = "Callisto";
+"strJovianApp" = "Jovian Digital App";
+"strServerUrlPlaceholder" = "Ex. your-company.joviandigital.com";
