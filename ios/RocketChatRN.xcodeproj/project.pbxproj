@@ -177,9 +177,6 @@
 		829D28502891856700E23152 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EFEB5952493B6640072EDC0 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		829D2860289298D800E23152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
 		829D28692892A01A00E23152 /* Callisto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829D286628929FF200E23152 /* Callisto.xcassets */; };
-		82B674612892ABBD00A6FC5D /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B674602892ABBD00A6FC5D /* WhiteLabelConfig.m */; };
-		82B674622892AC3600A6FC5D /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B674602892ABBD00A6FC5D /* WhiteLabelConfig.m */; };
-		82B674632892AC3900A6FC5D /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B674602892ABBD00A6FC5D /* WhiteLabelConfig.m */; };
 		82B674682892BAC200A6FC5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
 		82B674712892D3EA00A6FC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
 		82B674722892D3EB00A6FC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
@@ -187,6 +184,11 @@
 		82B674742892D42000A6FC5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		82B674752892D46E00A6FC5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		82B674762892D46F00A6FC5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		82BBCA2C2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
+		82BBCA2D2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
+		82BBCA2E2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
+		82BBCA3A2893EDF800237CDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
+		82BBCA3B2893EDF900237CDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
 		83F99820D542132F15E51371 /* libPods-defaults-RocketChatRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88665EE8B2B6F34580EEF27D /* libPods-defaults-RocketChatRN.a */; };
 		D62A2CEE91B92F16EAD2FA3F /* libPods-defaults-ShareRocketChatRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9747EA64783AAAD1486EC3CC /* libPods-defaults-ShareRocketChatRN.a */; };
 		D85BF476A3215BD80F1C79E7 /* libPods-defaults-NotificationService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5D50B36CB5F0E0126E19BE /* libPods-defaults-NotificationService.a */; };
@@ -285,7 +287,6 @@
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RocketChatRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RocketChatRN/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RocketChatRN/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RocketChatRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RocketChatRN/main.m; sourceTree = "<group>"; };
 		1A28A51C191812B6DE1F460B /* Pods-defaults-Rocket.Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Rocket.Chat.release.xcconfig"; path = "Target Support Files/Pods-defaults-Rocket.Chat/Pods-defaults-Rocket.Chat.release.xcconfig"; sourceTree = "<group>"; };
 		1E01C81B2511208400FEF824 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -352,10 +353,10 @@
 		829D286228929A8400E23152 /* ShareRocketChatRNDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareRocketChatRNDebug.entitlements; sourceTree = "<group>"; };
 		829D286328929AAB00E23152 /* NotificationServiceDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceDebug.entitlements; sourceTree = "<group>"; };
 		829D286628929FF200E23152 /* Callisto.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Callisto.xcassets; sourceTree = "<group>"; };
-		82B6745F2892ABBC00A6FC5D /* WhiteLabelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteLabelConfig.h; sourceTree = "<group>"; };
-		82B674602892ABBD00A6FC5D /* WhiteLabelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteLabelConfig.m; sourceTree = "<group>"; };
 		82B674692892BAC200A6FC5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		82B6747D2892E33600A6FC5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteLabelConfig.m; sourceTree = "<group>"; };
+		82BBCA2B2893E77800237CDD /* WhiteLabelConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteLabelConfig.h; sourceTree = "<group>"; };
+		82BBCA2F2893E79200237CDD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88665EE8B2B6F34580EEF27D /* libPods-defaults-RocketChatRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-defaults-RocketChatRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9747EA64783AAAD1486EC3CC /* libPods-defaults-ShareRocketChatRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-defaults-ShareRocketChatRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		977A37B323E7A8A7EC0B01EF /* Pods-defaults-NotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-NotificationService.debug.xcconfig"; path = "Target Support Files/Pods-defaults-NotificationService/Pods-defaults-NotificationService.debug.xcconfig"; sourceTree = "<group>"; };
@@ -460,7 +461,6 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				7A14FCEC257FEB3A005BDCD4 /* Experimental.xcassets */,
 				7A14FCF3257FEB59005BDCD4 /* Official.xcassets */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				7AAA749C23043B1D00F1ADE9 /* RocketChatRN-Bridging-Header.h */,
 				7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */,
@@ -593,9 +593,18 @@
 			children = (
 				829D286628929FF200E23152 /* Callisto.xcassets */,
 				82B6746A2892BAC200A6FC5D /* Localizable.strings */,
-				82B6747D2892E33600A6FC5D /* Info.plist */,
 			);
 			path = Callisto;
+			sourceTree = "<group>";
+		};
+		82BBCA292893E77800237CDD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */,
+				82BBCA2B2893E77800237CDD /* WhiteLabelConfig.h */,
+				82BBCA2F2893E79200237CDD /* Info.plist */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -608,8 +617,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				82B6745F2892ABBC00A6FC5D /* WhiteLabelConfig.h */,
-				82B674602892ABBD00A6FC5D /* WhiteLabelConfig.m */,
+				82BBCA292893E77800237CDD /* Main */,
 				829D286428929FF200E23152 /* Callisto */,
 				1E76CBC425152A7F0067298C /* Shared */,
 				1E068CFB24FD2DAF00A0FFC1 /* AppGroup */,
@@ -884,6 +892,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BBCA3B2893EDF900237CDD /* Localizable.strings in Resources */,
 				7A610CD227ECE38100B8ABDD /* custom.ttf in Resources */,
 				7A14FCED257FEB3A005BDCD4 /* Experimental.xcassets in Resources */,
 				82B674712892D3EA00A6FC5D /* LaunchScreen.storyboard in Resources */,
@@ -915,6 +924,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A14FCF4257FEB59005BDCD4 /* Official.xcassets in Resources */,
+				82BBCA3A2893EDF800237CDD /* Localizable.strings in Resources */,
 				7A610CD527ECE38100B8ABDD /* custom.ttf in Resources */,
 				7AAB3E42257E6A6E00707CF6 /* Images.xcassets in Resources */,
 				829D2860289298D800E23152 /* LaunchScreen.storyboard in Resources */,
@@ -1634,7 +1644,7 @@
 				1E76CBCF25152C310067298C /* NotificationType.swift in Sources */,
 				1E76CBDA25152C8E0067298C /* SendMessage.swift in Sources */,
 				82B674742892D42000A6FC5D /* main.m in Sources */,
-				82B674632892AC3900A6FC5D /* WhiteLabelConfig.m in Sources */,
+				82BBCA2C2893E77800237CDD /* WhiteLabelConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1711,7 +1721,7 @@
 				7AAB3E2F257E6A6E00707CF6 /* Message.swift in Sources */,
 				7AAB3E30257E6A6E00707CF6 /* NotificationType.swift in Sources */,
 				7AAB3E31257E6A6E00707CF6 /* SendMessage.swift in Sources */,
-				82B674612892ABBD00A6FC5D /* WhiteLabelConfig.m in Sources */,
+				82BBCA2D2893E77800237CDD /* WhiteLabelConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1747,7 +1757,7 @@
 				829D28352891856700E23152 /* NotificationType.swift in Sources */,
 				829D28362891856700E23152 /* SendMessage.swift in Sources */,
 				82B674732892D41F00A6FC5D /* main.m in Sources */,
-				82B674622892AC3600A6FC5D /* WhiteLabelConfig.m in Sources */,
+				82BBCA2E2893E77800237CDD /* WhiteLabelConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1833,7 +1843,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = RocketChatRN/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1887,7 +1897,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = RocketChatRN/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2143,7 +2153,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = RocketChatRN/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2196,7 +2206,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = RocketChatRN/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2250,7 +2260,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = Callisto/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2305,7 +2315,7 @@
 					"$(SRCROOT)/../../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
 				);
-				INFOPLIST_FILE = Callisto/Info.plist;
+				INFOPLIST_FILE = Main/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
