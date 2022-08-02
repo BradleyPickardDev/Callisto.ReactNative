@@ -13,6 +13,7 @@
 		"android": "npx react-native run-android --variant=experimentalPlayDebug",
 		"android-whitelabel": "npx react-native run-android --main-activity chat.rocket.reactnative.MainActivity --variant=callistoPlayDebug --appId",
 		"log-android": "react-native log-android",
+		"build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
 		"snyk-protect": "snyk protect",
 		"precommit": "lint-staged",
 		"generate-source-maps-ios": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios-release.bundle --sourcemap-output ios-release.bundle.map",
