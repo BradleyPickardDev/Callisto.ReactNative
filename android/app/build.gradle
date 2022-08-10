@@ -221,7 +221,7 @@ android {
             dimension = "app"
             buildConfigField "boolean", "IS_OFFICIAL", "true"
             applicationId 'com.joviandigital.callisto'
-            versionCode 3
+            versionCode 4
             versionName "1.0.1"
             manifestPlaceholders = [BugsnagAPIKey: "3736ac3ba68c4b46c95e495155810fa7"]
         }
