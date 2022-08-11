@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name" translatable="false">Sh*ftTalk!</string>
+    <string name="client_name" translatable="false">Sh*ftTalk!</string>
+    <string name="str_jovian_app" translatable="false">Shift Digital App</string>
+    <string name="str_server_url_placeholder" translatable="false">Ex. your-company.arcandbearing.studio</string>
+</resources>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "819862397730",
+    "project_id": "propeller-chat",
+    "storage_bucket": "propeller-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819862397730:android:66b1ed2b1c23933d69fb7b",
+        "android_client_info": {
+          "package_name": "com.arcandbearingstudio.propeller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819862397730-ubfnr4tgrs5k96nqq22bgb23i0192m64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfUPFibQjIIU6oucR1oLpyK45DpPNsnLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819862397730-ubfnr4tgrs5k96nqq22bgb23i0192m64.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "819862397730-suja70fq570ak28lktic1ni58qlu0p4d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arcandbearingstudio.propeller"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

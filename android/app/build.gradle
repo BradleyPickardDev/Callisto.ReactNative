@@ -225,9 +225,21 @@ android {
             versionName "1.0.1"
             manifestPlaceholders = [BugsnagAPIKey: "3736ac3ba68c4b46c95e495155810fa7"]
         }
+        propeller {
+            dimension = "app"
+            buildConfigField "boolean", "IS_OFFICIAL", "true"
+            applicationId 'com.arcandbearingstudio.propeller'
+            versionCode 3
+            versionName "1.0.1"
+            manifestPlaceholders = [BugsnagAPIKey: "ab055792bac31c25aa4bb493ccc91a57"]
+        }
     }
     sourceSets {
         // TODO: refactor making sure notifications are working properly both on debug and release
+        propellerPlayDebug {
+            java.srcDirs = ['src/main/java', 'src/play/java']
+            manifest.srcFile 'src/play/AndroidManifest.xml'
+        }
         callistoPlayDebug {
             java.srcDirs = ['src/main/java', 'src/play/java']
             manifest.srcFile 'src/play/AndroidManifest.xml'
