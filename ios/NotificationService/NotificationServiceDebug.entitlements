@@ -4,11 +4,9 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.joviandigital.callisto</string>
+		<string>group.com.arcandbearingstudio.propeller</string>
 	</array>
 	<key>keychain-access-groups</key>
-	<array>
-		<string>$(AppIdentifierPrefix)com.joviandigital.callisto</string>
-	</array>
+	<array/>
 </dict>
 </plist>

@@ -125,7 +125,58 @@
 		7ACD4897222860DE00442C55 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD4853222860DE00442C55 /* JavaScriptCore.framework */; };
 		8201295A289947350035FC07 /* librn-extensions-share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82012959289947350035FC07 /* librn-extensions-share.a */; };
 		8201295E28994C560035FC07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8201295B28994C560035FC07 /* GoogleService-Info.plist */; };
-		8294AF02289AA9F000CA515E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8201295B28994C560035FC07 /* GoogleService-Info.plist */; };
+		8253E86328A5335600C00A36 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8282511304100FEF824 /* Sender.swift */; };
+		8253E86428A5335600C00A36 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680ED82512990700C9257A /* Request.swift */; };
+		8253E86528A5335600C00A36 /* ReplyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED00BB02513E04400A1331F /* ReplyNotification.swift */; };
+		8253E86628A5335600C00A36 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8EF712510F1EE00F352B7 /* Storage.swift */; };
+		8253E86728A5335600C00A36 /* Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F61652512958900871711 /* Push.swift */; };
+		8253E86828A5335600C00A36 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0426E5251A5467008F022C /* RoomType.swift */; };
+		8253E86928A5335600C00A36 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51D961251263CD00DC95DE /* MessageType.swift */; };
+		8253E86A28A5335600C00A36 /* PushResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8202511301400FEF824 /* PushResponse.swift */; };
+		8253E86B28A5335600C00A36 /* Encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5FBD0250C109E00614FEA /* Encryption.swift */; };
+		8253E86C28A5335600C00A36 /* RocketChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E470E822513A71E00E3DD1D /* RocketChat.swift */; };
+		8253E86D28A5335600C00A36 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F61632512955D00871711 /* HTTPMethod.swift */; };
+		8253E86E28A5335600C00A36 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8262511303900FEF824 /* Payload.swift */; };
+		8253E86F28A5335600C00A36 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E598AE625150660002BDFBD /* Data+Extensions.swift */; };
+		8253E87028A5335600C00A36 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E598AE32515057D002BDFBD /* Date+Extensions.swift */; };
+		8253E87128A5335600C00A36 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C2F7F250FCB69005DCE7D /* Database.swift */; };
+		8253E87228A5335600C00A36 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67380324DC529B0009E081 /* String+Extensions.swift */; };
+		8253E87328A5335600C00A36 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8242511303100FEF824 /* Notification.swift */; };
+		8253E87428A5335600C00A36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		8253E87528A5335600C00A36 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F615A25128F9A00871711 /* API.swift */; };
+		8253E87628A5335600C00A36 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F615C25128FA300871711 /* Response.swift */; };
+		8253E87728A5335600C00A36 /* AppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E068D0024FD2E0500A0FFC1 /* AppGroup.m */; };
+		8253E87828A5335600C00A36 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C81B2511208400FEF824 /* URL+Extensions.swift */; };
+		8253E87928A5335600C00A36 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E068CFD24FD2DC700A0FFC1 /* AppGroup.swift */; };
+		8253E87A28A5335600C00A36 /* RoomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C82C2511337700FEF824 /* RoomKey.swift */; };
+		8253E87B28A5335600C00A36 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C82A2511335A00FEF824 /* Message.swift */; };
+		8253E87C28A5335600C00A36 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51D964251263D600DC95DE /* NotificationType.swift */; };
+		8253E87D28A5335600C00A36 /* SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E598AE825151A63002BDFBD /* SendMessage.swift */; };
+		8253E87E28A5335600C00A36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		8253E87F28A5335600C00A36 /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
+		8253E88128A5335600C00A36 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C79D9BD0742CE936B6982 /* libc++.tbd */; };
+		8253E88228A5335600C00A36 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8192326CD5100E22452 /* libsqlite3.tbd */; };
+		8253E88328A5335600C00A36 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8172326CD4B00E22452 /* libc.tbd */; };
+		8253E88428A5335600C00A36 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8152326CD4500E22452 /* VideoToolbox.framework */; };
+		8253E88528A5335600C00A36 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8132326CD3E00E22452 /* CoreVideo.framework */; };
+		8253E88628A5335600C00A36 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8112326CD3900E22452 /* CoreAudio.framework */; };
+		8253E88728A5335600C00A36 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA80F2326CD3300E22452 /* GLKit.framework */; };
+		8253E88828A5335600C00A36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA80D2326CD2F00E22452 /* CoreGraphics.framework */; };
+		8253E88928A5335600C00A36 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA80B2326CD2800E22452 /* AudioToolbox.framework */; };
+		8253E88A28A5335600C00A36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1EA8092326CD2200E22452 /* AVFoundation.framework */; };
+		8253E88B28A5335600C00A36 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD4853222860DE00442C55 /* JavaScriptCore.framework */; };
+		8253E88C28A5335600C00A36 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BB44DD4855498082A744AD /* libz.tbd */; };
+		8253E88D28A5335600C00A36 /* libWatermelonDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7E862283664608B3894E34 /* libWatermelonDB.a */; };
+		8253E88E28A5335600C00A36 /* libPods-defaults-RocketChatRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88665EE8B2B6F34580EEF27D /* libPods-defaults-RocketChatRN.a */; };
+		8253E89128A5335600C00A36 /* custom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A610CD127ECE38100B8ABDD /* custom.ttf */; };
+		8253E89428A5335600C00A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
+		8253E89728A5335600C00A36 /* ShareRocketChatRN.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EC6ACB022CB9FC300A41C61 /* ShareRocketChatRN.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8253E89828A5335600C00A36 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EFEB5952493B6640072EDC0 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8253E8A728A53A4600C00A36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A328A53A4600C00A36 /* Localizable.strings */; };
+		8253E8A828A53A4600C00A36 /* ShiftTalk.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */; };
+		8253E8B228A54D0B00C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
+		8253E8B528A54E5700C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
+		8253E8B628A54E5700C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
 		8294AF03289AAF8700CA515E /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
 		829D281B2891856700E23152 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8282511304100FEF824 /* Sender.swift */; };
 		829D281C2891856700E23152 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680ED82512990700C9257A /* Request.swift */; };
@@ -172,7 +223,6 @@
 		829D28502891856700E23152 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EFEB5952493B6640072EDC0 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		829D2860289298D800E23152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
 		829D28692892A01A00E23152 /* Callisto.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829D286628929FF200E23152 /* Callisto.xcassets */; };
-		82A42A1F289BEA5000751572 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8201295B28994C560035FC07 /* GoogleService-Info.plist */; };
 		82B674682892BAC200A6FC5D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
 		82B674712892D3EA00A6FC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
 		82B674722892D3EB00A6FC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
@@ -183,7 +233,6 @@
 		82BBCA2C2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
 		82BBCA2D2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
 		82BBCA2E2893E77800237CDD /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
-		82BBCA3A2893EDF800237CDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
 		82BBCA3B2893EDF900237CDD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B6746A2892BAC200A6FC5D /* Localizable.strings */; };
 		83F99820D542132F15E51371 /* libPods-defaults-RocketChatRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88665EE8B2B6F34580EEF27D /* libPods-defaults-RocketChatRN.a */; };
 		D62A2CEE91B92F16EAD2FA3F /* libPods-defaults-ShareRocketChatRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9747EA64783AAAD1486EC3CC /* libPods-defaults-ShareRocketChatRN.a */; };
@@ -192,6 +241,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8253E85D28A5335600C00A36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EC6ACAF22CB9FC300A41C61;
+			remoteInfo = ShareRocketChatRN;
+		};
+		8253E8B028A54A7B00C00A36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EFEB5942493B6640072EDC0;
+			remoteInfo = NotificationService;
+		};
 		8294AEFE289A9DB400CA515E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -223,6 +286,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8253E89628A5335600C00A36 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8253E89728A5335600C00A36 /* ShareRocketChatRN.appex in Embed App Extensions */,
+				8253E89828A5335600C00A36 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		829D284E2891856700E23152 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +380,14 @@
 		7ACD4853222860DE00442C55 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		82012959289947350035FC07 /* librn-extensions-share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "librn-extensions-share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8201295B28994C560035FC07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8253E8A028A5335700C00A36 /* ShiftTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8253E8A128A5335700C00A36 /* Callisto copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Callisto copy-Info.plist"; path = "/Users/abdulrahmanmajeed/ReactNative/JovianDigital/Callisto.ReactNative/ios/Callisto copy-Info.plist"; sourceTree = "<absolute>"; };
+		8253E8A428A53A4600C00A36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShiftTalk.xcassets; sourceTree = "<group>"; };
+		8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8253E8AA28A53C3000C00A36 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8253E8AC28A53DF900C00A36 /* CallistoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallistoRelease.entitlements; sourceTree = "<group>"; };
+		8253E8AD28A53E2700C00A36 /* ShiftTalkRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiftTalkRelease.entitlements; sourceTree = "<group>"; };
 		8254958F7FAFC2744F0BEFA2 /* libPods-defaults-Rocket.Chat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-defaults-Rocket.Chat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829D28582891856700E23152 /* Callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829D286228929A8400E23152 /* ShareRocketChatRNDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareRocketChatRNDebug.entitlements; sourceTree = "<group>"; };
@@ -381,6 +464,27 @@
 				7AAB3E3E257E6A6E00707CF6 /* libz.tbd in Frameworks */,
 				7AAB3E3F257E6A6E00707CF6 /* libWatermelonDB.a in Frameworks */,
 				29B785412B69F334BD7E6314 /* libPods-defaults-Rocket.Chat.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8253E88028A5335600C00A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8253E88128A5335600C00A36 /* libc++.tbd in Frameworks */,
+				8253E88228A5335600C00A36 /* libsqlite3.tbd in Frameworks */,
+				8253E88328A5335600C00A36 /* libc.tbd in Frameworks */,
+				8253E88428A5335600C00A36 /* VideoToolbox.framework in Frameworks */,
+				8253E88528A5335600C00A36 /* CoreVideo.framework in Frameworks */,
+				8253E88628A5335600C00A36 /* CoreAudio.framework in Frameworks */,
+				8253E88728A5335600C00A36 /* GLKit.framework in Frameworks */,
+				8253E88828A5335600C00A36 /* CoreGraphics.framework in Frameworks */,
+				8253E88928A5335600C00A36 /* AudioToolbox.framework in Frameworks */,
+				8253E88A28A5335600C00A36 /* AVFoundation.framework in Frameworks */,
+				8253E88B28A5335600C00A36 /* JavaScriptCore.framework in Frameworks */,
+				8253E88C28A5335600C00A36 /* libz.tbd in Frameworks */,
+				8253E88D28A5335600C00A36 /* libWatermelonDB.a in Frameworks */,
+				8253E88E28A5335600C00A36 /* libPods-defaults-RocketChatRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,9 +647,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8253E8A228A53A4600C00A36 /* ShiftTalk */ = {
+			isa = PBXGroup;
+			children = (
+				8253E8AD28A53E2700C00A36 /* ShiftTalkRelease.entitlements */,
+				8253E8A328A53A4600C00A36 /* Localizable.strings */,
+				8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */,
+				8253E8AA28A53C3000C00A36 /* Info.plist */,
+				8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */,
+			);
+			path = ShiftTalk;
+			sourceTree = "<group>";
+		};
 		829D286428929FF200E23152 /* Callisto */ = {
 			isa = PBXGroup;
 			children = (
+				8253E8AC28A53DF900C00A36 /* CallistoRelease.entitlements */,
 				8201295B28994C560035FC07 /* GoogleService-Info.plist */,
 				829D286628929FF200E23152 /* Callisto.xcassets */,
 				82B6746A2892BAC200A6FC5D /* Localizable.strings */,
@@ -573,6 +690,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8253E8A228A53A4600C00A36 /* ShiftTalk */,
 				82BBCA292893E77800237CDD /* Main */,
 				829D286428929FF200E23152 /* Callisto */,
 				1E76CBC425152A7F0067298C /* Shared */,
@@ -586,6 +704,7 @@
 				AF5E16F0398347E6A80C8CBE /* Resources */,
 				B8E79A681F3CCC69005B464F /* Recovered References */,
 				7AC2B09613AA7C3FEBAC9F57 /* Pods */,
+				8253E8A128A5335700C00A36 /* Callisto copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -599,6 +718,7 @@
 				1EFEB5952493B6640072EDC0 /* NotificationService.appex */,
 				7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */,
 				829D28582891856700E23152 /* Callisto.app */,
+				8253E8A028A5335700C00A36 /* ShiftTalk.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -735,6 +855,33 @@
 			productReference = 7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8253E85B28A5335600C00A36 /* ShiftTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8253E89D28A5335600C00A36 /* Build configuration list for PBXNativeTarget "ShiftTalk" */;
+			buildPhases = (
+				8253E86028A5335600C00A36 /* [CP] Check Pods Manifest.lock */,
+				8253E86128A5335600C00A36 /* Start Packager */,
+				8253E86228A5335600C00A36 /* Sources */,
+				8253E88028A5335600C00A36 /* Frameworks */,
+				8253E88F28A5335600C00A36 /* Resources */,
+				8253E89528A5335600C00A36 /* Bundle React Native code and images */,
+				8253E89628A5335600C00A36 /* Embed App Extensions */,
+				8253E89928A5335600C00A36 /* ShellScript */,
+				8253E89A28A5335600C00A36 /* Upload source maps to Bugsnag */,
+				8253E89B28A5335600C00A36 /* [CP] Embed Pods Frameworks */,
+				8253E89C28A5335600C00A36 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8253E8B128A54A7B00C00A36 /* PBXTargetDependency */,
+				8253E85C28A5335600C00A36 /* PBXTargetDependency */,
+			);
+			name = ShiftTalk;
+			productName = "Hello World";
+			productReference = 8253E8A028A5335700C00A36 /* ShiftTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
 		829D28132891856700E23152 /* Callisto */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 829D28552891856700E23152 /* Build configuration list for PBXNativeTarget "Callisto" */;
@@ -794,7 +941,7 @@
 					};
 					1EC6ACAF22CB9FC300A41C61 = {
 						CreatedOnToolsVersion = 10.2.1;
-						DevelopmentTeam = UUYC32D8AT;
+						DevelopmentTeam = PA5VAVP9B3;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -804,11 +951,15 @@
 					};
 					1EFEB5942493B6640072EDC0 = {
 						CreatedOnToolsVersion = 11.5;
-						DevelopmentTeam = UUYC32D8AT;
+						DevelopmentTeam = PA5VAVP9B3;
 						ProvisioningStyle = Automatic;
 					};
 					7AAB3E0D257E6A6E00707CF6 = {
 						ProvisioningStyle = Manual;
+					};
+					8253E85B28A5335600C00A36 = {
+						DevelopmentTeam = PA5VAVP9B3;
+						ProvisioningStyle = Automatic;
 					};
 					829D28132891856700E23152 = {
 						DevelopmentTeam = UUYC32D8AT;
@@ -835,6 +986,7 @@
 				1EFEB5942493B6640072EDC0 /* NotificationService */,
 				829D28132891856700E23152 /* Callisto */,
 				7AAB3E0D257E6A6E00707CF6 /* Rocket.Chat */,
+				8253E85B28A5335600C00A36 /* ShiftTalk */,
 			);
 		};
 /* End PBXProject section */
@@ -856,8 +1008,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD327ECE38100B8ABDD /* custom.ttf in Resources */,
+				8253E8B628A54E5700C00A36 /* GoogleService-Info.plist in Resources */,
 				1EC6ACB722CB9FC300A41C61 /* MainInterface.storyboard in Resources */,
-				8294AF02289AA9F000CA515E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,7 +1018,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD427ECE38100B8ABDD /* custom.ttf in Resources */,
-				82A42A1F289BEA5000751572 /* GoogleService-Info.plist in Resources */,
+				8253E8B528A54E5700C00A36 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,10 +1027,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A14FCF4257FEB59005BDCD4 /* Official.xcassets in Resources */,
-				82BBCA3A2893EDF800237CDD /* Localizable.strings in Resources */,
 				7A610CD527ECE38100B8ABDD /* custom.ttf in Resources */,
 				7AAB3E42257E6A6E00707CF6 /* Images.xcassets in Resources */,
 				829D2860289298D800E23152 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8253E88F28A5335600C00A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8253E8A728A53A4600C00A36 /* Localizable.strings in Resources */,
+				8253E89128A5335600C00A36 /* custom.ttf in Resources */,
+				8253E8B228A54D0B00C00A36 /* GoogleService-Info.plist in Resources */,
+				8253E8A828A53A4600C00A36 /* ShiftTalk.xcassets in Resources */,
+				8253E89428A5335600C00A36 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1205,6 +1368,169 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "echo \"Target architectures: $ARCHS\"\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\nFRAMEWORK_TMP_PATH=\"$FRAMEWORK_EXECUTABLE_PATH-tmp\"\n\n# remove simulator's archs if location is not simulator's directory\ncase \"${TARGET_BUILD_DIR}\" in\n*\"iphonesimulator\")\necho \"No need to remove archs\"\n;;\n*)\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"i386\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"i386\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"i386 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"x86_64\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"x86_64\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"x86_64 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\n;;\nesac\n\necho \"Completed for executable $FRAMEWORK_EXECUTABLE_PATH\"\necho $\n\ndone\n";
+		};
+		8253E86028A5335600C00A36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-defaults-RocketChatRN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8253E86128A5335600C00A36 /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+		};
+		8253E89528A5335600C00A36 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export EXTRA_PACKAGER_ARGS=\"--sourcemap-output $TMPDIR/$(md5 -qs \"$CONFIGURATION_BUILD_DIR\")-main.jsbundle.map\"\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		8253E89928A5335600C00A36 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Target architectures: $ARCHS\"\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\nFRAMEWORK_TMP_PATH=\"$FRAMEWORK_EXECUTABLE_PATH-tmp\"\n\n# remove simulator's archs if location is not simulator's directory\ncase \"${TARGET_BUILD_DIR}\" in\n*\"iphonesimulator\")\necho \"No need to remove archs\"\n;;\n*)\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"i386\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"i386\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"i386 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"x86_64\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"x86_64\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"x86_64 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\n;;\nesac\n\necho \"Completed for executable $FRAMEWORK_EXECUTABLE_PATH\"\necho $\n\ndone\n";
+		};
+		8253E89A28A5335600C00A36 /* Upload source maps to Bugsnag */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload source maps to Bugsnag";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE_MAP=\"$TMPDIR/$(md5 -qs \"$CONFIGURATION_BUILD_DIR\")-main.jsbundle.map\" ../node_modules/@bugsnag/react-native/bugsnag-react-native-xcode.sh\n";
+		};
+		8253E89B28A5335600C00A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-defaults-RocketChatRN/Pods-defaults-RocketChatRN-frameworks.sh",
+				"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/iphoneos/hermes.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/JitsiMeetSDK/JitsiMeetSDK.framework/JitsiMeetSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/JitsiMeetSDK/WebRTC.framework/WebRTC",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JitsiMeetSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-defaults-RocketChatRN/Pods-defaults-RocketChatRN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8253E89C28A5335600C00A36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-defaults-RocketChatRN/Pods-defaults-RocketChatRN-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNImageCropPicker/QBImagePicker.bundle",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TOCropViewController/TOCropViewControllerBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QBImagePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TOCropViewControllerBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-defaults-RocketChatRN/Pods-defaults-RocketChatRN-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		829D28182891856700E23152 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1676,6 +2002,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8253E86228A5335600C00A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8253E86328A5335600C00A36 /* Sender.swift in Sources */,
+				8253E86428A5335600C00A36 /* Request.swift in Sources */,
+				8253E86528A5335600C00A36 /* ReplyNotification.swift in Sources */,
+				8253E86628A5335600C00A36 /* Storage.swift in Sources */,
+				8253E86728A5335600C00A36 /* Push.swift in Sources */,
+				8253E86828A5335600C00A36 /* RoomType.swift in Sources */,
+				8253E86928A5335600C00A36 /* MessageType.swift in Sources */,
+				8253E86A28A5335600C00A36 /* PushResponse.swift in Sources */,
+				8253E86B28A5335600C00A36 /* Encryption.swift in Sources */,
+				8253E86C28A5335600C00A36 /* RocketChat.swift in Sources */,
+				8253E86D28A5335600C00A36 /* HTTPMethod.swift in Sources */,
+				8253E86E28A5335600C00A36 /* Payload.swift in Sources */,
+				8253E86F28A5335600C00A36 /* Data+Extensions.swift in Sources */,
+				8253E87028A5335600C00A36 /* Date+Extensions.swift in Sources */,
+				8253E87128A5335600C00A36 /* Database.swift in Sources */,
+				8253E87228A5335600C00A36 /* String+Extensions.swift in Sources */,
+				8253E87328A5335600C00A36 /* Notification.swift in Sources */,
+				8253E87428A5335600C00A36 /* AppDelegate.m in Sources */,
+				8253E87528A5335600C00A36 /* API.swift in Sources */,
+				8253E87628A5335600C00A36 /* Response.swift in Sources */,
+				8253E87728A5335600C00A36 /* AppGroup.m in Sources */,
+				8253E87828A5335600C00A36 /* URL+Extensions.swift in Sources */,
+				8253E87928A5335600C00A36 /* AppGroup.swift in Sources */,
+				8253E87A28A5335600C00A36 /* RoomKey.swift in Sources */,
+				8253E87B28A5335600C00A36 /* Message.swift in Sources */,
+				8253E87C28A5335600C00A36 /* NotificationType.swift in Sources */,
+				8253E87D28A5335600C00A36 /* SendMessage.swift in Sources */,
+				8253E87E28A5335600C00A36 /* main.m in Sources */,
+				8253E87F28A5335600C00A36 /* WhiteLabelConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		829D281A2891856700E23152 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1715,6 +2077,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8253E85C28A5335600C00A36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EC6ACAF22CB9FC300A41C61 /* ShareRocketChatRN */;
+			targetProxy = 8253E85D28A5335600C00A36 /* PBXContainerItemProxy */;
+		};
+		8253E8B128A54A7B00C00A36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EFEB5942493B6640072EDC0 /* NotificationService */;
+			targetProxy = 8253E8B028A54A7B00C00A36 /* PBXContainerItemProxy */;
+		};
 		8294AEFF289A9DB400CA515E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1EFEB5942493B6640072EDC0 /* NotificationService */;
@@ -1744,6 +2116,14 @@
 				1EC6ACB622CB9FC300A41C61 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		8253E8A328A53A4600C00A36 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8253E8A428A53A4600C00A36 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		82B6746A2892BAC200A6FC5D /* Localizable.strings */ = {
@@ -1890,9 +2270,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = UUYC32D8AT;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -2084,7 +2464,7 @@
 					"-framework",
 					"\"hermes\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joviandigital.callisto.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2119,9 +2499,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UUYC32D8AT;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2151,7 +2531,7 @@
 					"$(inherited)",
 					"-DFB_SONARKIT_ENABLED=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joviandigital.callisto.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2174,9 +2554,9 @@
 				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationServiceDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = UUYC32D8AT;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -2186,7 +2566,7 @@
 				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joviandigital.callisto.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2214,9 +2594,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UUYC32D8AT;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
 				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
@@ -2224,7 +2604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.0.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joviandigital.callisto.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -2341,6 +2721,116 @@
 			};
 			name = Release;
 		};
+		8253E89E28A5335600C00A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A8E0E87A40E71A91253A4B7 /* Pods-defaults-RocketChatRN.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShiftTalk/ShiftTalkRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
+				INFOPLIST_FILE = ShiftTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(inherited)",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocketChatRN-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RocketChatRN-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		8253E89F28A5335600C00A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295C2358EF89141BF3F047D4 /* Pods-defaults-RocketChatRN.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShiftTalk/ShiftTalkRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = PA5VAVP9B3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB/SupportingFiles/**",
+				);
+				INFOPLIST_FILE = ShiftTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(inherited)",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DFB_SONARKIT_ENABLED=1",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arcandbearingstudio.propeller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RocketChatRN-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "RocketChatRN-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
 		829D28562891856700E23152 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A8E0E87A40E71A91253A4B7 /* Pods-defaults-RocketChatRN.debug.xcconfig */;
@@ -2406,7 +2896,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = RocketChatRN/RocketChatRN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Callisto/CallistoRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -2590,6 +3080,15 @@
 			buildConfigurations = (
 				7AAB3E50257E6A6E00707CF6 /* Debug */,
 				7AAB3E51257E6A6E00707CF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8253E89D28A5335600C00A36 /* Build configuration list for PBXNativeTarget "ShiftTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8253E89E28A5335600C00A36 /* Debug */,
+				8253E89F28A5335600C00A36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
