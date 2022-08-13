@@ -10,8 +10,8 @@ buildscript {
     ext {
         buildToolsVersion = "29.0.3"
         minSdkVersion = 23
-        compileSdkVersion = 30
-        targetSdkVersion = 30
+        compileSdkVersion = 32
+        targetSdkVersion = 32
         ndkVersion = "20.1.5948944"
         glideVersion = "4.11.0"
         kotlin_version = "1.6.10"
@@ -72,10 +72,10 @@ subprojects { subproject ->
     afterEvaluate {
         if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
             android {
-                compileSdkVersion 30
+                compileSdkVersion 32
                 buildToolsVersion "29.0.3"
                 defaultConfig {
-                    targetSdkVersion 30
+                    targetSdkVersion 32
                 }
                 variantFilter { variant ->
                     def names = variant.flavors*.name

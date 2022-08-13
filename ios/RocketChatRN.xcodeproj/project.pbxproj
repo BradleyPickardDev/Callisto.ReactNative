@@ -74,8 +74,6 @@
 		1EFEB5982493B6640072EDC0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFEB5972493B6640072EDC0 /* NotificationService.swift */; };
 		24A2AEF2383D44B586D31C01 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BB44DD4855498082A744AD /* libz.tbd */; };
 		29B785412B69F334BD7E6314 /* libPods-defaults-Rocket.Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8254958F7FAFC2744F0BEFA2 /* libPods-defaults-Rocket.Chat.a */; };
-		7A14FCED257FEB3A005BDCD4 /* Experimental.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A14FCEC257FEB3A005BDCD4 /* Experimental.xcassets */; };
-		7A14FCF4257FEB59005BDCD4 /* Official.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A14FCF3257FEB59005BDCD4 /* Official.xcassets */; };
 		7A610CD227ECE38100B8ABDD /* custom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A610CD127ECE38100B8ABDD /* custom.ttf */; };
 		7A610CD327ECE38100B8ABDD /* custom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A610CD127ECE38100B8ABDD /* custom.ttf */; };
 		7A610CD427ECE38100B8ABDD /* custom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A610CD127ECE38100B8ABDD /* custom.ttf */; };
@@ -125,6 +123,7 @@
 		7ACD4897222860DE00442C55 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACD4853222860DE00442C55 /* JavaScriptCore.framework */; };
 		8201295A289947350035FC07 /* librn-extensions-share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82012959289947350035FC07 /* librn-extensions-share.a */; };
 		8201295E28994C560035FC07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8201295B28994C560035FC07 /* GoogleService-Info.plist */; };
+		821F042328A7812700031A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9928A7778100F834AD /* GoogleService-Info.plist */; };
 		8253E86328A5335600C00A36 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8282511304100FEF824 /* Sender.swift */; };
 		8253E86428A5335600C00A36 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680ED82512990700C9257A /* Request.swift */; };
 		8253E86528A5335600C00A36 /* ReplyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED00BB02513E04400A1331F /* ReplyNotification.swift */; };
@@ -172,11 +171,12 @@
 		8253E89428A5335600C00A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */; };
 		8253E89728A5335600C00A36 /* ShareRocketChatRN.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EC6ACB022CB9FC300A41C61 /* ShareRocketChatRN.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8253E89828A5335600C00A36 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1EFEB5952493B6640072EDC0 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8253E8A728A53A4600C00A36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A328A53A4600C00A36 /* Localizable.strings */; };
-		8253E8A828A53A4600C00A36 /* ShiftTalk.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */; };
-		8253E8B228A54D0B00C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
-		8253E8B528A54E5700C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
-		8253E8B628A54E5700C00A36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */; };
+		8259AE9C28A7778100F834AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9628A7778100F834AD /* Localizable.strings */; };
+		8259AE9D28A7778100F834AD /* ShiftTalk.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9828A7778100F834AD /* ShiftTalk.xcassets */; };
+		8259AEA028A7778F00F834AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9928A7778100F834AD /* GoogleService-Info.plist */; };
+		8259AEA128A7779000F834AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9928A7778100F834AD /* GoogleService-Info.plist */; };
+		8259AEA228A777A100F834AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9628A7778100F834AD /* Localizable.strings */; };
+		8259AEA328A777A200F834AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8259AE9628A7778100F834AD /* Localizable.strings */; };
 		8294AF03289AAF8700CA515E /* WhiteLabelConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BBCA2A2893E77800237CDD /* WhiteLabelConfig.m */; };
 		829D281B2891856700E23152 /* Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E01C8282511304100FEF824 /* Sender.swift */; };
 		829D281C2891856700E23152 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E680ED82512990700C9257A /* Request.swift */; };
@@ -372,8 +372,6 @@
 		60B2A6A31FC4588700BD58E5 /* RocketChatRN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = RocketChatRN.entitlements; path = RocketChatRN/RocketChatRN.entitlements; sourceTree = "<group>"; };
 		67366E177712BF459EE04D2F /* Pods-defaults-Rocket.Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-defaults-Rocket.Chat.debug.xcconfig"; path = "Target Support Files/Pods-defaults-Rocket.Chat/Pods-defaults-Rocket.Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7A14FCEC257FEB3A005BDCD4 /* Experimental.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Experimental.xcassets; sourceTree = "<group>"; };
-		7A14FCF3257FEB59005BDCD4 /* Official.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Official.xcassets; sourceTree = "<group>"; };
 		7A610CD127ECE38100B8ABDD /* custom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = custom.ttf; sourceTree = "<group>"; };
 		7AAA749C23043B1D00F1ADE9 /* RocketChatRN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketChatRN-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AAB3E52257E6A6E00707CF6 /* Rocket.Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocket.Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,14 +379,13 @@
 		82012959289947350035FC07 /* librn-extensions-share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "librn-extensions-share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8201295B28994C560035FC07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8253E8A028A5335700C00A36 /* ShiftTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8253E8A128A5335700C00A36 /* Callisto copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Callisto copy-Info.plist"; path = "/Users/abdulrahmanmajeed/ReactNative/JovianDigital/Callisto.ReactNative/ios/Callisto copy-Info.plist"; sourceTree = "<absolute>"; };
-		8253E8A428A53A4600C00A36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShiftTalk.xcassets; sourceTree = "<group>"; };
-		8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8253E8AA28A53C3000C00A36 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8253E8AC28A53DF900C00A36 /* CallistoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallistoRelease.entitlements; sourceTree = "<group>"; };
-		8253E8AD28A53E2700C00A36 /* ShiftTalkRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiftTalkRelease.entitlements; sourceTree = "<group>"; };
 		8254958F7FAFC2744F0BEFA2 /* libPods-defaults-Rocket.Chat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-defaults-Rocket.Chat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8259AE9728A7778100F834AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8259AE9828A7778100F834AD /* ShiftTalk.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShiftTalk.xcassets; sourceTree = "<group>"; };
+		8259AE9928A7778100F834AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8259AE9A28A7778100F834AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8259AE9B28A7778100F834AD /* ShiftTalkRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ShiftTalkRelease.entitlements; sourceTree = "<group>"; };
 		829D28582891856700E23152 /* Callisto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callisto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829D286228929A8400E23152 /* ShareRocketChatRNDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareRocketChatRNDebug.entitlements; sourceTree = "<group>"; };
 		829D286328929AAB00E23152 /* NotificationServiceDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceDebug.entitlements; sourceTree = "<group>"; };
@@ -519,8 +516,6 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				7A14FCEC257FEB3A005BDCD4 /* Experimental.xcassets */,
-				7A14FCF3257FEB59005BDCD4 /* Official.xcassets */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				7AAA749C23043B1D00F1ADE9 /* RocketChatRN-Bridging-Header.h */,
 				7A0D62D1242AB187006D5C06 /* LaunchScreen.storyboard */,
@@ -647,14 +642,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		8253E8A228A53A4600C00A36 /* ShiftTalk */ = {
+		8259AE9528A7778100F834AD /* ShiftTalk */ = {
 			isa = PBXGroup;
 			children = (
-				8253E8AD28A53E2700C00A36 /* ShiftTalkRelease.entitlements */,
-				8253E8A328A53A4600C00A36 /* Localizable.strings */,
-				8253E8A528A53A4600C00A36 /* ShiftTalk.xcassets */,
-				8253E8AA28A53C3000C00A36 /* Info.plist */,
-				8253E8A628A53A4600C00A36 /* GoogleService-Info.plist */,
+				8259AE9628A7778100F834AD /* Localizable.strings */,
+				8259AE9828A7778100F834AD /* ShiftTalk.xcassets */,
+				8259AE9928A7778100F834AD /* GoogleService-Info.plist */,
+				8259AE9A28A7778100F834AD /* Info.plist */,
+				8259AE9B28A7778100F834AD /* ShiftTalkRelease.entitlements */,
 			);
 			path = ShiftTalk;
 			sourceTree = "<group>";
@@ -690,7 +685,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				8253E8A228A53A4600C00A36 /* ShiftTalk */,
+				8259AE9528A7778100F834AD /* ShiftTalk */,
 				82BBCA292893E77800237CDD /* Main */,
 				829D286428929FF200E23152 /* Callisto */,
 				1E76CBC425152A7F0067298C /* Shared */,
@@ -704,7 +699,6 @@
 				AF5E16F0398347E6A80C8CBE /* Resources */,
 				B8E79A681F3CCC69005B464F /* Recovered References */,
 				7AC2B09613AA7C3FEBAC9F57 /* Pods */,
-				8253E8A128A5335700C00A36 /* Callisto copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -901,8 +895,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				829D28142891856700E23152 /* PBXTargetDependency */,
 				829D28162891856700E23152 /* PBXTargetDependency */,
+				829D28142891856700E23152 /* PBXTargetDependency */,
 			);
 			name = Callisto;
 			productName = "Hello World";
@@ -998,7 +992,6 @@
 			files = (
 				82BBCA3B2893EDF900237CDD /* Localizable.strings in Resources */,
 				7A610CD227ECE38100B8ABDD /* custom.ttf in Resources */,
-				7A14FCED257FEB3A005BDCD4 /* Experimental.xcassets in Resources */,
 				82B674712892D3EA00A6FC5D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1008,8 +1001,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD327ECE38100B8ABDD /* custom.ttf in Resources */,
-				8253E8B628A54E5700C00A36 /* GoogleService-Info.plist in Resources */,
+				8259AEA228A777A100F834AD /* Localizable.strings in Resources */,
 				1EC6ACB722CB9FC300A41C61 /* MainInterface.storyboard in Resources */,
+				8259AEA128A7779000F834AD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,7 +1012,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A610CD427ECE38100B8ABDD /* custom.ttf in Resources */,
-				8253E8B528A54E5700C00A36 /* GoogleService-Info.plist in Resources */,
+				8259AEA328A777A200F834AD /* Localizable.strings in Resources */,
+				8259AEA028A7778F00F834AD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,7 +1021,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A14FCF4257FEB59005BDCD4 /* Official.xcassets in Resources */,
 				7A610CD527ECE38100B8ABDD /* custom.ttf in Resources */,
 				7AAB3E42257E6A6E00707CF6 /* Images.xcassets in Resources */,
 				829D2860289298D800E23152 /* LaunchScreen.storyboard in Resources */,
@@ -1037,10 +1031,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8253E8A728A53A4600C00A36 /* Localizable.strings in Resources */,
+				8259AE9D28A7778100F834AD /* ShiftTalk.xcassets in Resources */,
 				8253E89128A5335600C00A36 /* custom.ttf in Resources */,
-				8253E8B228A54D0B00C00A36 /* GoogleService-Info.plist in Resources */,
-				8253E8A828A53A4600C00A36 /* ShiftTalk.xcassets in Resources */,
+				821F042328A7812700031A6C /* GoogleService-Info.plist in Resources */,
+				8259AE9C28A7778100F834AD /* Localizable.strings in Resources */,
 				8253E89428A5335600C00A36 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2118,10 +2112,10 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
-		8253E8A328A53A4600C00A36 /* Localizable.strings */ = {
+		8259AE9628A7778100F834AD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8253E8A428A53A4600C00A36 /* en */,
+				8259AE9728A7778100F834AD /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

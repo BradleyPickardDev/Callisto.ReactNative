@@ -61,19 +61,19 @@
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-App-20x20@2x.png",
+      "filename" : "Icon-App-20x20@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-App-29x29@1x.png",
+      "filename" : "Icon-App-29x29@1x-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-App-29x29@2x.png",
+      "filename" : "Icon-App-29x29@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
@@ -85,7 +85,7 @@
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-App-40x40@2x.png",
+      "filename" : "Icon-App-40x40@2x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
@@ -109,10 +109,16 @@
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "ItunesArtwork@2x.png",
+      "filename" : "Icon-App-1024x1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "filename" : "Icon-App-512x512.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
     }
   ],
   "info" : {

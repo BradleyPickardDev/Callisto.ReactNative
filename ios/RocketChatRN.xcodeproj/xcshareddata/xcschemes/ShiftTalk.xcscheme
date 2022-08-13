@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8253E85B28A5335600C00A36"
-               BuildableName = "Callisto copy.app"
+               BuildableName = "ShiftTalk.app"
                BlueprintName = "ShiftTalk"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8253E85B28A5335600C00A36"
-            BuildableName = "Callisto copy.app"
+            BuildableName = "ShiftTalk.app"
             BlueprintName = "ShiftTalk"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8253E85B28A5335600C00A36"
-            BuildableName = "Callisto copy.app"
+            BuildableName = "ShiftTalk.app"
             BlueprintName = "ShiftTalk"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>

@@ -354,7 +354,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								marginBottom: verticalScale({ size: 30, height })
 							}
 						]}>
-						{I18n.t('Onboarding_subtitle')}
+						{/* {I18n.t('Onboarding_subtitle')} */}
 					</Text>
 					<ServerInput
 						text={text}

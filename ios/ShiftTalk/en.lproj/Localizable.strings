@@ -6,5 +6,5 @@
   Copyright © 2022 Facebook. All rights reserved.
 */
 "clientName" = "Sh*ftTalk!";
-"strJovianApp" = "Shift Digital App";
-"strServerUrlPlaceholder" = "Ex. your-company.arcandbearing.studio";
+"strJovianApp" = "Sh*ftTalk! Digital App";
+"strServerUrlPlaceholder" = "Ex. shifttalk.arcandbearing.studio";

@@ -33,7 +33,7 @@ interface IWithoutServerViewProps {
 
 class WithoutServerView extends React.Component<IWithoutServerViewProps> {
 	static navigationOptions = () => ({
-		title: 'Rocket.Chat',
+		title: 'ShiftTalk',
 		headerLeft: () => <HeaderButton.CancelModal onPress={ShareExtension.close} testID='share-extension-close' />
 	});
 
