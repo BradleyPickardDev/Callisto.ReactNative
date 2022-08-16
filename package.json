@@ -11,7 +11,7 @@
 		"ci": "npm run precommit && codecov",
 		"ios": "npx react-native run-ios",
 		"android": "npx react-native run-android --variant=experimentalPlayDebug",
-		"android-whitelabel": "npx react-native run-android --main-activity chat.rocket.reactnative.MainActivity --variant=propellerPlayDebug --appId",
+		"android-whitelabel": "npx react-native run-android --main-activity chat.rocket.reactnative.MainActivity --variant=shifttalkPlayDebug --appId",
 		"log-android": "react-native log-android",
 		"build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
 		"snyk-protect": "snyk protect",
