@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AppGroup</key>
-	<string>group.com.arcandbearingstudio.propeller</string>
+	<string>group.chat.holyshift.studio</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -25,7 +25,7 @@
 	<key>IS_OFFICIAL</key>
 	<false/>
 	<key>KeychainGroup</key>
-	<string>$(AppIdentifierPrefix)com.arcandbearingstudio.propeller</string>
+	<string>$(AppIdentifierPrefix)chat.holyshift.studio</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
