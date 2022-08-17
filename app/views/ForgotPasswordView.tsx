@@ -24,7 +24,7 @@ type IForgotPasswordViewProps = IBaseScreen<OutsideParamList, 'ForgotPasswordVie
 
 class ForgotPasswordView extends React.Component<IForgotPasswordViewProps, IForgotPasswordViewState> {
 	static navigationOptions = ({ route }: IForgotPasswordViewProps) => ({
-		title: route.params?.title ?? 'Rocket.Chat'
+		title: route.params?.title ?? 'Sh*ftTalk!'
 	});
 
 	state = {

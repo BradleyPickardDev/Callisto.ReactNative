@@ -9,7 +9,8 @@ import { connect } from 'react-redux';
 import { appStart } from '../../actions/app';
 import { logout } from '../../actions/login';
 import { selectServerRequest } from '../../actions/server';
-import { APP_STORE_LINK, FDROID_MARKET_LINK, LICENSE_LINK, PLAY_MARKET_LINK, isFDroidBuild, themes } from '../../lib/constants';
+// import { APP_STORE_LINK, FDROID_MARKET_LINK, LICENSE_LINK, PLAY_MARKET_LINK, isFDroidBuild, themes } from '../../lib/constants';
+import { APP_STORE_LINK, FDROID_MARKET_LINK, PLAY_MARKET_LINK, isFDroidBuild, themes } from '../../lib/constants';
 import * as HeaderButton from '../../containers/HeaderButton';
 import * as List from '../../containers/List';
 import SafeAreaView from '../../containers/SafeAreaView';
@@ -26,7 +27,7 @@ import { getDeviceModel, getReadableVersion, isAndroid } from '../../lib/methods
 import EventEmitter from '../../lib/methods/helpers/events';
 import { showConfirmationAlert, showErrorAlert } from '../../lib/methods/helpers/info';
 import { events, logEvent } from '../../lib/methods/helpers/log';
-import openLink from '../../lib/methods/helpers/openLink';
+// import openLink from '../../lib/methods/helpers/openLink';
 import { onReviewPress } from '../../lib/methods/helpers/review';
 import SidebarView from '../SidebarView';
 import { clearCache } from '../../lib/methods';
@@ -116,8 +117,8 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 
 	sendEmail = async () => {
 		logEvent(events.SE_CONTACT_US);
-		const subject = encodeURI('Rocket.Chat Mobile App Support');
-		const email = encodeURI('support@rocket.chat');
+		const subject = encodeURI('Sh*ftTalk! Mobile App Support');
+		const email = encodeURI('corey@holyshift.studio');
 		const description = encodeURI(`
 			version: ${getReadableVersion}
 			device: ${getDeviceModel}
@@ -126,7 +127,7 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 			await Linking.openURL(`mailto:${email}?subject=${subject}&body=${description}`);
 		} catch (e) {
 			logEvent(events.SE_CONTACT_US_F);
-			showErrorAlert(I18n.t('error-email-send-failed', { message: 'support@rocket.chat' }));
+			showErrorAlert(I18n.t('error-email-send-failed', { message: 'corey@holyshift.studio' }));
 		}
 	};
 
@@ -162,11 +163,11 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 		EventEmitter.emit(LISTENER, { message: I18n.t('Copied_to_clipboard') });
 	};
 
-	onPressLicense = () => {
-		logEvent(events.SE_READ_LICENSE);
-		const { theme } = this.props;
-		openLink(LICENSE_LINK, theme);
-	};
+	// onPressLicense = () => {
+	// 	logEvent(events.SE_READ_LICENSE);
+	// 	const { theme } = this.props;
+	// 	openLink(LICENSE_LINK, theme);
+	// };
 
 	render() {
 		const { server, isMasterDetail, theme } = this.props;
@@ -245,8 +246,8 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 
 					<List.Section>
 						<List.Separator />
-						<List.Item title='License' onPress={this.onPressLicense} showActionIndicator testID='settings-view-license' />
-						<List.Separator />
+						{/* <List.Item title='License' onPress={this.onPressLicense} showActionIndicator testID='settings-view-license' />
+						<List.Separator /> */}
 						<List.Item
 							title={I18n.t('Version_no', { version: getReadableVersion })}
 							onPress={this.copyAppVersion}
