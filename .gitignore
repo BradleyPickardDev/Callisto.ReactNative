@@ -72,3 +72,4 @@ e2e/e2e_account.js
 # IOS
 *.p8
 GoogleService-Info.plist
+output-metadata.json
