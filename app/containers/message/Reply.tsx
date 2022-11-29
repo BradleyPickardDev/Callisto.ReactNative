@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
 	},
 	author: {
 		fontSize: 16,
-		...sharedStyles.textMedium
+		...sharedStyles.textMedium,
+		flexShrink: 1
 	},
 	fieldsContainer: {
 		flex: 1,
@@ -90,6 +91,7 @@ interface IMessageReply {
 	timeFormat?: string;
 	index: number;
 	getCustomEmoji: TGetCustomEmoji;
+	messageId: string;
 }
 
 const Title = React.memo(
@@ -98,7 +100,9 @@ const Title = React.memo(
 		return (
 			<View style={styles.authorContainer}>
 				{attachment.author_name ? (
-					<Text style={[styles.author, { color: themes[theme].auxiliaryTintColor }]}>{attachment.author_name}</Text>
+					<Text numberOfLines={1} style={[styles.author, { color: themes[theme].auxiliaryTintColor }]}>
+						{attachment.author_name}
+					</Text>
 				) : null}
 				{time ? <Text style={[messageStyles.time, { color: themes[theme].auxiliaryText }]}>{time}</Text> : null}
 				{attachment.title ? <Text style={[styles.title, { color: themes[theme].bodyText }]}>{attachment.title}</Text> : null}
@@ -201,7 +205,7 @@ const Fields = React.memo(
 );
 
 const Reply = React.memo(
-	({ attachment, timeFormat, index, getCustomEmoji }: IMessageReply) => {
+	({ attachment, timeFormat, index, getCustomEmoji, messageId }: IMessageReply) => {
 		const [loading, setLoading] = useState(false);
 		const { theme } = useTheme();
 		const { baseUrl, user, jumpToMessage } = useContext(MessageContext);
@@ -246,7 +250,8 @@ const Reply = React.memo(
 						}
 					]}
 					background={Touchable.Ripple(themes[theme].bannerBackground)}
-					disabled={loading}>
+					disabled={loading}
+				>
 					<View style={styles.attachmentContainer}>
 						<Title attachment={attachment} timeFormat={timeFormat} theme={theme} />
 						<Attachments
@@ -255,6 +260,7 @@ const Reply = React.memo(
 							timeFormat={timeFormat}
 							style={[{ color: themes[theme].auxiliaryTintColor, fontSize: 14, marginBottom: 8 }]}
 							isReply
+							id={messageId}
 						/>
 						<UrlImage image={attachment.thumb_url} />
 						<Description attachment={attachment} getCustomEmoji={getCustomEmoji} theme={theme} />
@@ -265,7 +271,8 @@ const Reply = React.memo(
 									style={[
 										styles.backdrop,
 										{ backgroundColor: themes[theme].bannerBackground, opacity: themes[theme].attachmentLoadingOpacity }
-									]}></View>
+									]}
+								></View>
 								<RCActivityIndicator />
 							</View>
 						) : null}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1340"
+   LastUpgradeVersion = "1410"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8253E85B28A5335600C00A36"
+               BlueprintIdentifier = "82A1B90629362CBE0070FBA9"
                BuildableName = "ShiftTalk.app"
                BlueprintName = "ShiftTalk"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8253E85B28A5335600C00A36"
+            BlueprintIdentifier = "82A1B90629362CBE0070FBA9"
             BuildableName = "ShiftTalk.app"
             BlueprintName = "ShiftTalk"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8253E85B28A5335600C00A36"
+            BlueprintIdentifier = "82A1B90629362CBE0070FBA9"
             BuildableName = "ShiftTalk.app"
             BlueprintName = "ShiftTalk"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">

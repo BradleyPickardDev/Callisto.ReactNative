@@ -1,62 +1,62 @@
 import CookieManager from '@react-native-cookies/cookies';
-import { StackNavigationOptions } from '@react-navigation/stack';
-import FastImage from 'react-native-fast-image';
-import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import React, { useLayoutEffect } from 'react';
 import { Linking, Share } from 'react-native';
-import Clipboard from '@react-native-clipboard/clipboard';
-import { connect } from 'react-redux';
+import FastImage from 'react-native-fast-image';
+import { useDispatch } from 'react-redux';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 import { appStart } from '../../actions/app';
 import { logout } from '../../actions/login';
 import { selectServerRequest } from '../../actions/server';
-// import { APP_STORE_LINK, FDROID_MARKET_LINK, LICENSE_LINK, PLAY_MARKET_LINK, isFDroidBuild, themes } from '../../lib/constants';
-import { APP_STORE_LINK, FDROID_MARKET_LINK, PLAY_MARKET_LINK, isFDroidBuild, themes } from '../../lib/constants';
+import { APP_STORE_LINK, FDROID_MARKET_LINK, PLAY_MARKET_LINK, isFDroidBuild} from '../../lib/constants';
 import * as HeaderButton from '../../containers/HeaderButton';
 import * as List from '../../containers/List';
 import SafeAreaView from '../../containers/SafeAreaView';
 import StatusBar from '../../containers/StatusBar';
-import { LISTENER } from '../../containers/Toast';
-import { IApplicationState, IBaseScreen, IUser, RootEnum } from '../../definitions';
+import { RootEnum } from '../../definitions';
 import I18n from '../../i18n';
 import database from '../../lib/database';
-import { IServer } from '../../reducers/server';
-import { getUserSelector } from '../../selectors/login';
-import { SettingsStackParamList } from '../../stacks/types';
-import { withTheme } from '../../theme';
+import { useAppSelector } from '../../lib/hooks';
+import { clearCache } from '../../lib/methods';
+import { deleteAllAudioFiles } from '../../lib/methods/audioFile';
 import { getDeviceModel, getReadableVersion, isAndroid } from '../../lib/methods/helpers';
-import EventEmitter from '../../lib/methods/helpers/events';
 import { showConfirmationAlert, showErrorAlert } from '../../lib/methods/helpers/info';
 import { events, logEvent } from '../../lib/methods/helpers/log';
-// import openLink from '../../lib/methods/helpers/openLink';
 import { onReviewPress } from '../../lib/methods/helpers/review';
-import SidebarView from '../SidebarView';
-import { clearCache } from '../../lib/methods';
 import { Services } from '../../lib/services';
+import { getUserSelector } from '../../selectors/login';
+import { SettingsStackParamList } from '../../stacks/types';
+import { useTheme } from '../../theme';
+import SidebarView from '../SidebarView';
 
 type TLogScreenName = 'SE_GO_LANGUAGE' | 'SE_GO_DEFAULTBROWSER' | 'SE_GO_THEME' | 'SE_GO_PROFILE' | 'SE_GO_SECURITYPRIVACY';
 
-interface ISettingsViewProps extends IBaseScreen<SettingsStackParamList, 'SettingsView'> {
-	server: IServer;
-	user: IUser;
-}
+const SettingsView = (): React.ReactElement => {
+	const { colors } = useTheme();
+	const navigation = useNavigation<StackNavigationProp<SettingsStackParamList, 'SettingsView'>>();
+	const dispatch = useDispatch();
+	const isMasterDetail = useAppSelector(state => state.app.isMasterDetail);
+	const userId = useAppSelector(state => getUserSelector(state).id);
+	const { server} = useAppSelector(state => state.server);
 
-class SettingsView extends React.Component<ISettingsViewProps> {
-	static navigationOptions = ({ navigation, isMasterDetail }: ISettingsViewProps): StackNavigationOptions => ({
-		headerLeft: () =>
-			isMasterDetail ? (
-				<HeaderButton.CloseModal navigation={navigation} testID='settings-view-close' />
-			) : (
-				<HeaderButton.Drawer navigation={navigation} testID='settings-view-drawer' />
-			),
-		title: I18n.t('Settings')
-	});
+	useLayoutEffect(() => {
+		navigation.setOptions({
+			headerLeft: () =>
+				isMasterDetail ? (
+					<HeaderButton.CloseModal navigation={navigation} testID='settings-view-close' />
+				) : (
+					<HeaderButton.Drawer navigation={navigation} testID='settings-view-drawer' />
+				),
+			title: I18n.t('Settings')
+		});
+	}, [navigation, isMasterDetail]);
 
-	checkCookiesAndLogout = async () => {
-		const { dispatch, user } = this.props;
+	const checkCookiesAndLogout = async () => {
 		const db = database.servers;
 		const usersCollection = db.get('users');
 		try {
-			const userRecord = await usersCollection.find(user.id);
+			const userRecord = await usersCollection.find(userId);
 			if (userRecord.isFromWebView) {
 				showConfirmationAlert({
 					title: I18n.t('Clear_cookies_alert'),
@@ -79,26 +79,23 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 		}
 	};
 
-	handleLogout = () => {
+	const handleLogout = () => {
 		logEvent(events.SE_LOG_OUT);
 		showConfirmationAlert({
 			message: I18n.t('You_will_be_logged_out_of_this_application'),
 			confirmationText: I18n.t('Logout'),
-			onPress: this.checkCookiesAndLogout
+			onPress: checkCookiesAndLogout
 		});
 	};
 
-	handleClearCache = () => {
+	const handleClearCache = () => {
 		logEvent(events.SE_CLEAR_LOCAL_SERVER_CACHE);
 		showConfirmationAlert({
 			message: I18n.t('This_will_clear_all_your_offline_data'),
 			confirmationText: I18n.t('Clear'),
 			onPress: async () => {
-				const {
-					server: { server },
-					dispatch
-				} = this.props;
 				dispatch(appStart({ root: RootEnum.ROOT_LOADING, text: I18n.t('Clear_cache_loading') }));
+				await deleteAllAudioFiles(server);
 				await clearCache({ server });
 				await FastImage.clearMemoryCache();
 				await FastImage.clearDiskCache();
@@ -108,14 +105,13 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 		});
 	};
 
-	navigateToScreen = (screen: keyof SettingsStackParamList) => {
+	const navigateToScreen = (screen: keyof SettingsStackParamList) => {
 		const screenName = screen.replace('View', '').toUpperCase();
 		logEvent(events[`SE_GO_${screenName}` as TLogScreenName]);
-		const { navigation } = this.props;
 		navigation.navigate(screen);
 	};
 
-	sendEmail = async () => {
+	const sendEmail = async () => {
 		logEvent(events.SE_CONTACT_US);
 		const subject = encodeURI('Sh*ftTalk! Mobile App Support');
 		const email = encodeURI('corey@holyshift.studio');
@@ -131,7 +127,7 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 		}
 	};
 
-	shareApp = () => {
+	const shareApp = () => {
 		let message;
 		if (isAndroid) {
 			message = PLAY_MARKET_LINK;
@@ -144,24 +140,21 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 		Share.share({ message });
 	};
 
-	copyServerVersion = () => {
-		const {
-			server: { version }
-		} = this.props;
-		const vers = version as string;
-		logEvent(events.SE_COPY_SERVER_VERSION, { serverVersion: vers });
-		this.saveToClipboard(vers);
-	};
+	// const copyServerVersion = () => {
+	// 	const vers = version as string;
+	// 	logEvent(events.SE_COPY_SERVER_VERSION, { serverVersion: vers });
+	// 	saveToClipboard(vers);
+	// };
 
-	copyAppVersion = () => {
-		logEvent(events.SE_COPY_APP_VERSION, { appVersion: getReadableVersion });
-		this.saveToClipboard(getReadableVersion);
-	};
+	// const copyAppVersion = () => {
+	// 	logEvent(events.SE_COPY_APP_VERSION, { appVersion: getReadableVersion });
+	// 	saveToClipboard(getReadableVersion);
+	// };
 
-	saveToClipboard = async (content: string) => {
-		await Clipboard.setString(content);
-		EventEmitter.emit(LISTENER, { message: I18n.t('Copied_to_clipboard') });
-	};
+	// const saveToClipboard = async (content: string) => {
+	// 	await Clipboard.setString(content);
+	// 	EventEmitter.emit(LISTENER, { message: I18n.t('Copied_to_clipboard') });
+	// };
 
 	// onPressLicense = () => {
 	// 	logEvent(events.SE_READ_LICENSE);
@@ -169,80 +162,73 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 	// 	openLink(LICENSE_LINK, theme);
 	// };
 
-	render() {
-		const { server, isMasterDetail, theme } = this.props;
-		return (
-			<SafeAreaView testID='settings-view'>
-				<StatusBar />
-				<List.Container>
-					{isMasterDetail ? (
+	return (
+		<SafeAreaView testID='settings-view'>
+			<StatusBar />
+			<List.Container>
+				{isMasterDetail ? (
+					<>
+						<List.Section>
+							<List.Separator />
+							<SidebarView />
+							<List.Separator />
+						</List.Section>
+						<List.Section>
+							<List.Separator />
+							<List.Item title='Display' onPress={() => navigateToScreen('DisplayPrefsView')} showActionIndicator />
+							<List.Separator />
+							<List.Item
+								title='Profile'
+								onPress={() => navigateToScreen('ProfileView')}
+								showActionIndicator
+								testID='settings-profile'
+							/>
+							<List.Separator />
+						</List.Section>
+					</>
+				) : null}
+
+				<List.Section>
+					<List.Separator />
+					<List.Item title='Contact_us' onPress={sendEmail} showActionIndicator testID='settings-view-contact' />
+					<List.Separator />
+					<List.Item
+						title='Language'
+						onPress={() => navigateToScreen('LanguageView')}
+						showActionIndicator
+						testID='settings-view-language'
+					/>
+					<List.Separator />
+					{!isFDroidBuild ? (
 						<>
-							<List.Section>
-								<List.Separator />
-								<SidebarView theme={theme} />
-								<List.Separator />
-							</List.Section>
-							<List.Section>
-								<List.Separator />
-								<List.Item title='Display' onPress={() => this.navigateToScreen('DisplayPrefsView')} showActionIndicator />
-								<List.Separator />
-								<List.Item
-									title='Profile'
-									onPress={() => this.navigateToScreen('ProfileView')}
-									showActionIndicator
-									testID='settings-profile'
-								/>
-								<List.Separator />
-							</List.Section>
+							<List.Item title='Review_this_app' showActionIndicator onPress={onReviewPress} testID='settings-view-review-app' />
 						</>
 					) : null}
-
-					<List.Section>
-						<List.Separator />
-						<List.Item title='Contact_us' onPress={this.sendEmail} showActionIndicator testID='settings-view-contact' />
-						<List.Separator />
-						<List.Item
-							title='Language'
-							onPress={() => this.navigateToScreen('LanguageView')}
-							showActionIndicator
-							testID='settings-view-language'
-						/>
-						<List.Separator />
-						{!isFDroidBuild ? (
-							<>
-								<List.Item
-									title='Review_this_app'
-									showActionIndicator
-									onPress={onReviewPress}
-									testID='settings-view-review-app'
-								/>
-							</>
-						) : null}
-						<List.Separator />
-						<List.Item title='Share_this_app' showActionIndicator onPress={this.shareApp} testID='settings-view-share-app' />
-						<List.Separator />
-						<List.Item
-							title='Default_browser'
-							showActionIndicator
-							onPress={() => this.navigateToScreen('DefaultBrowserView')}
-							testID='settings-view-default-browser'
-						/>
-						<List.Separator />
-						<List.Item
-							title='Theme'
-							showActionIndicator
-							onPress={() => this.navigateToScreen('ThemeView')}
-							testID='settings-view-theme'
-						/>
-						<List.Separator />
-						<List.Item
-							title='Security_and_privacy'
-							showActionIndicator
-							onPress={() => this.navigateToScreen('SecurityPrivacyView')}
-							testID='settings-view-security-privacy'
-						/>
-						<List.Separator />
-					</List.Section>
+					<List.Separator />
+					<List.Item title='Share_this_app' showActionIndicator onPress={shareApp} testID='settings-view-share-app' />
+					<List.Separator />
+					<List.Item
+						title='Default_browser'
+						showActionIndicator
+						onPress={() => navigateToScreen('DefaultBrowserView')}
+						testID='settings-view-default-browser'
+					/>
+					<List.Separator />
+					<List.Item
+						title='Theme'
+						showActionIndicator
+						onPress={() => navigateToScreen('ThemeView')}
+						testID='settings-view-theme'
+					/>
+					<List.Separator />
+					<List.Item
+						title='Security_and_privacy'
+						showActionIndicator
+						onPress={() => navigateToScreen('SecurityPrivacyView')}
+						testID='settings-view-security-privacy'
+					/>
+					<List.Separator />
+				</List.Section>
 
 					<List.Section>
 						<List.Separator />
@@ -266,35 +252,28 @@ class SettingsView extends React.Component<ISettingsViewProps> {
 						<List.Separator />
 					</List.Section>
 
-					<List.Section>
-						<List.Separator />
-						<List.Item
-							title='Clear_cache'
-							testID='settings-view-clear-cache'
-							onPress={this.handleClearCache}
-							showActionIndicator
-							color={themes[theme].dangerColor}
-						/>
-						<List.Separator />
-						<List.Item
-							title='Logout'
-							testID='settings-logout'
-							onPress={this.handleLogout}
-							showActionIndicator
-							color={themes[theme].dangerColor}
-						/>
-						<List.Separator />
-					</List.Section>
-				</List.Container>
-			</SafeAreaView>
-		);
-	}
-}
+				<List.Section>
+					<List.Separator />
+					<List.Item
+						title='Clear_cache'
+						testID='settings-view-clear-cache'
+						onPress={handleClearCache}
+						showActionIndicator
+						color={colors.dangerColor}
+					/>
+					<List.Separator />
+					<List.Item
+						title='Logout'
+						testID='settings-logout'
+						onPress={handleLogout}
+						showActionIndicator
+						color={colors.dangerColor}
+					/>
+					<List.Separator />
+				</List.Section>
+			</List.Container>
+		</SafeAreaView>
+	);
+};
 
-const mapStateToProps = (state: IApplicationState) => ({
-	server: state.server,
-	user: getUserSelector(state),
-	isMasterDetail: state.app.isMasterDetail
-});
-
-export default connect(mapStateToProps)(withTheme(SettingsView));
+export default SettingsView;

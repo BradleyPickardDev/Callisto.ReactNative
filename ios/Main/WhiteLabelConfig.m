@@ -15,7 +15,6 @@ RCT_EXPORT_MODULE(WhiteLabelConfig);
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getAppName) {
 //  return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
   return NSLocalizedString(@"strJovianApp", @"App name");
-
 }
 
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getGreetingText) {
@@ -30,10 +29,20 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getServerPlaceHolder) {
   return NSLocalizedString(@"strServerUrlPlaceholder", @"App name");
 }
 
-
-
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getClientName) {
   return NSLocalizedString(@"clientName", @"App name");
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getStoreApplicationID) {
+  return NSLocalizedString(@"strStoreApplicationId", @"");
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getBundleID) {
+  return [[NSBundle mainBundle] bundleIdentifier];
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getContactUsEmail) {
+  return NSLocalizedString(@"strContactUsEmail", @"");
 }
 
 @end
