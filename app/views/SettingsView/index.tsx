@@ -29,6 +29,7 @@ import { getUserSelector } from '../../selectors/login';
 import { SettingsStackParamList } from '../../stacks/types';
 import { useTheme } from '../../theme';
 import SidebarView from '../SidebarView';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 type TLogScreenName = 'SE_GO_LANGUAGE' | 'SE_GO_DEFAULTBROWSER' | 'SE_GO_THEME' | 'SE_GO_PROFILE' | 'SE_GO_SECURITYPRIVACY';
 
@@ -113,8 +114,8 @@ const SettingsView = (): React.ReactElement => {
 
 	const sendEmail = async () => {
 		logEvent(events.SE_CONTACT_US);
-		const subject = encodeURI('Sh*ftTalk! Mobile App Support');
-		const email = encodeURI('corey@holyshift.studio');
+		const subject = encodeURI(`${whiteLabelConfig.CLIENT_NAME} Mobile App Support`);
+		const email = encodeURI(whiteLabelConfig.CONTACT_US_EMAIL);
 		const description = encodeURI(`
 			version: ${getReadableVersion}
 			device: ${getDeviceModel}
@@ -123,7 +124,7 @@ const SettingsView = (): React.ReactElement => {
 			await Linking.openURL(`mailto:${email}?subject=${subject}&body=${description}`);
 		} catch (e) {
 			logEvent(events.SE_CONTACT_US_F);
-			showErrorAlert(I18n.t('error-email-send-failed', { message: 'corey@holyshift.studio' }));
+			showErrorAlert(I18n.t('error-email-send-failed', { message: whiteLabelConfig.CONTACT_US_EMAIL }));
 		}
 	};
 
@@ -139,28 +140,6 @@ const SettingsView = (): React.ReactElement => {
 		}
 		Share.share({ message });
 	};
-
-	// const copyServerVersion = () => {
-	// 	const vers = version as string;
-	// 	logEvent(events.SE_COPY_SERVER_VERSION, { serverVersion: vers });
-	// 	saveToClipboard(vers);
-	// };
-
-	// const copyAppVersion = () => {
-	// 	logEvent(events.SE_COPY_APP_VERSION, { appVersion: getReadableVersion });
-	// 	saveToClipboard(getReadableVersion);
-	// };
-
-	// const saveToClipboard = async (content: string) => {
-	// 	await Clipboard.setString(content);
-	// 	EventEmitter.emit(LISTENER, { message: I18n.t('Copied_to_clipboard') });
-	// };
-
-	// onPressLicense = () => {
-	// 	logEvent(events.SE_READ_LICENSE);
-	// 	const { theme } = this.props;
-	// 	openLink(LICENSE_LINK, theme);
-	// };
 
 	return (
 		<SafeAreaView testID='settings-view'>
@@ -229,28 +208,6 @@ const SettingsView = (): React.ReactElement => {
 					/>
 					<List.Separator />
 				</List.Section>
-
-					<List.Section>
-						<List.Separator />
-						{/* <List.Item title='License' onPress={this.onPressLicense} showActionIndicator testID='settings-view-license' />
-						<List.Separator /> */}
-						<List.Item
-							title={I18n.t('Version_no', { version: getReadableVersion })}
-							onPress={this.copyAppVersion}
-							testID='settings-view-version'
-							translateTitle={false}
-						/>
-						<List.Separator />
-						<List.Item
-							title={I18n.t('Server_version', { version: server.version })}
-							onPress={this.copyServerVersion}
-							subtitle={`${server.server.split('//')[1]}`}
-							testID='settings-view-server-version'
-							translateTitle={false}
-							translateSubtitle={false}
-						/>
-						<List.Separator />
-					</List.Section>
 
 				<List.Section>
 					<List.Separator />

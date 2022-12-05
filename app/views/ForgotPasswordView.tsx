@@ -16,6 +16,7 @@ import { useTheme } from '../theme';
 import { showErrorAlert } from '../lib/methods/helpers';
 import { events, logEvent } from '../lib/methods/helpers/log';
 import sharedStyles from './Styles';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const schema = yup.object().shape({
 	email: yup.string().email().required()
@@ -40,7 +41,7 @@ const ForgotPasswordView = (): React.ReactElement => {
 
 	useLayoutEffect(() => {
 		navigation.setOptions({
-			title: params?.title ?? 'Sh*ftTalk!'
+			title: params?.title ?? whiteLabelConfig.CLIENT_NAME
 		});
 	}, [navigation, params?.title]);
 

@@ -19,7 +19,6 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)chat.holyshift.studio</string>
 		<string>$(AppIdentifierPrefix)com.joviandigital.callisto</string>
 	</array>
 </dict>

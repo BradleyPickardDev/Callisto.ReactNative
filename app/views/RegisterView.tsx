@@ -70,7 +70,7 @@ class RegisterView extends React.Component<IProps, any> {
 	private avatarUrl?: RNTextInput | null;
 
 	static navigationOptions = ({ route, navigation }: IProps) => ({
-		title: route?.params?.title ?? 'Sh*ftTalk!',
+		title: route?.params?.title ?? whiteLabelConfig.CLIENT_NAME,
 		headerRight: () => <HeaderButton.Legal testID='register-view-more' navigation={navigation} />
 	});
 

@@ -56,7 +56,6 @@ public class WhiteLabelConfig extends ReactContextBaseJavaModule {
     @ReactMethod(isBlockingSynchronousMethod = true)
     public String getLogoPath() {
         return "logo";
-//        return "android/app/src/callisto/res/drawable/logo.png";
     }
 
     @Nonnull

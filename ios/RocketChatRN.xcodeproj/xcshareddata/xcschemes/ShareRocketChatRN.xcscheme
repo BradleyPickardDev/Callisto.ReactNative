@@ -29,9 +29,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Rocket.Chat Experimental.app"
-               BlueprintName = "RocketChatRN"
+               BlueprintIdentifier = "82B240E829361ECB003F7DCD"
+               BuildableName = "Callisto.app"
+               BlueprintName = "Callisto"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -68,18 +68,9 @@
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
          runnableDebuggingMode = "1"
-         BundleIdentifier = "com.apple.mobileslideshow"
-         RemotePath = "/Applications/MobileSlideShow.app">
+         BundleIdentifier = "com.apple.mobilesafari"
+         RemotePath = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/Applications/MobileSafari.app">
       </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Rocket.Chat Experimental.app"
-            BlueprintName = "RocketChatRN"
-            ReferencedContainer = "container:RocketChatRN.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -88,16 +79,15 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Rocket.Chat Experimental.app"
-            BlueprintName = "RocketChatRN"
+            BlueprintIdentifier = "1EC6ACAF22CB9FC300A41C61"
+            BuildableName = "ShareRocketChatRN.appex"
+            BlueprintName = "ShareRocketChatRN"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -254,6 +254,8 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 				url = `https://${url}`;
 			}
 		}
+		if (url.startsWith('http://'))
+			url = url.replace('http://', 'https://')
 		return serializeAsciiUrl(url.replace(/\/+$/, '').replace(/\\/g, '/'));
 	};
 
@@ -356,7 +358,6 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								marginBottom: verticalScale({ size: 30, height })
 							}
 						]}>
-						{/* {I18n.t('Onboarding_subtitle')} */}
 					</Text>
 					<ServerInput
 						text={text}
@@ -376,30 +377,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 						style={[styles.connectButton, { marginTop: verticalScale({ size: 16, height }) }]}
 						testID='new-server-view-button'
 					/>
-					{/* <OrSeparator theme={theme} />
-					<Text
-						style={[
-							styles.description,
-							{
-								color: themes[theme].auxiliaryText,
-								fontSize: moderateScale({ size: 14, width }),
-								marginBottom: verticalScale({ size: 16, height })
-							}
-						]}
-					>
-						{I18n.t('Onboarding_join_open_description')}
-					</Text>
-					<Button
-						title={I18n.t('Join_our_open_workspace')}
-						type='secondary'
-						backgroundColor={themes[theme].chatComponentBackground}
-						onPress={this.connectOpen}
-						disabled={connecting}
-						loading={connectingOpen && connecting}
-						testID='new-server-view-open'
-					/> */}
 				</FormContainerInner>
-				{/* {this.renderCertificatePicker()} */}
 			</FormContainer>
 		);
 	}
