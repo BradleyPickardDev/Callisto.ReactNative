@@ -31,6 +31,7 @@ import SSLPinning from '../../lib/methods/helpers/sslPinning';
 import sharedStyles from '../Styles';
 import ServerInput from './ServerInput';
 import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
+import { serializeAsciiUrl } from '../../lib/methods';
 
 const styles = StyleSheet.create({
 	onboardingImage: {
@@ -253,8 +254,9 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 				url = `https://${url}`;
 			}
 		}
-
-		return url.replace(/\/+$/, '').replace(/\\/g, '/');
+		if (url.startsWith('http://'))
+			url = url.replace('http://', 'https://')
+		return serializeAsciiUrl(url.replace(/\/+$/, '').replace(/\\/g, '/'));
 	};
 
 	uriToPath = (uri: string) => uri.replace('file://', '');
@@ -291,19 +293,23 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 					{
 						marginBottom: verticalScale({ size: previousServer && !isTablet ? 10 : 30, height })
 					}
-				]}>
+				]}
+			>
 				<Text
 					style={[
 						styles.chooseCertificateTitle,
 						{ color: themes[theme].auxiliaryText, fontSize: moderateScale({ size: 13, width }) }
-					]}>
+					]}
+				>
 					{certificate ? I18n.t('Your_certificate') : I18n.t('Do_you_have_a_certificate')}
 				</Text>
 				<TouchableOpacity
 					onPress={certificate ? this.handleRemove : this.chooseCertificate}
-					testID='new-server-choose-certificate'>
+					testID='new-server-choose-certificate'
+				>
 					<Text
-						style={[styles.chooseCertificate, { color: themes[theme].tintColor, fontSize: moderateScale({ size: 13, width }) }]}>
+						style={[styles.chooseCertificate, { color: themes[theme].tintColor, fontSize: moderateScale({ size: 13, width }) }]}
+					>
 						{certificate ?? I18n.t('Apply_Your_Certificate')}
 					</Text>
 				</TouchableOpacity>
@@ -329,8 +335,6 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								height: verticalScale({ size: 100, height })
 							}
 						]}
-						// source={require('../../static/images/logo.png')}
-						// source={require('../../../android/app/src/callisto/res/drawable/logo.png')}
 						source={{ uri: whiteLabelConfig.APP_LOGO_PATH }}
 						fadeDuration={0}
 					/>
@@ -354,7 +358,6 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								marginBottom: verticalScale({ size: 30, height })
 							}
 						]}>
-						{I18n.t('Onboarding_subtitle')}
 					</Text>
 					<ServerInput
 						text={text}
@@ -374,29 +377,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 						style={[styles.connectButton, { marginTop: verticalScale({ size: 16, height }) }]}
 						testID='new-server-view-button'
 					/>
-					{/* <OrSeparator theme={theme} />
-					<Text
-						style={[
-							styles.description,
-							{
-								color: themes[theme].auxiliaryText,
-								fontSize: moderateScale({ size: 14, width }),
-								marginBottom: verticalScale({ size: 16, height })
-							}
-						]}>
-						{I18n.t('Onboarding_join_open_description')}
-					</Text>
-					<Button
-						title={I18n.t('Join_our_open_workspace')}
-						type='secondary'
-						backgroundColor={themes[theme].chatComponentBackground}
-						onPress={this.connectOpen}
-						disabled={connecting}
-						loading={connectingOpen && connecting}
-						testID='new-server-view-open'
-					/> */}
 				</FormContainerInner>
-				{/* {this.renderCertificatePicker()} */}
 			</FormContainer>
 		);
 	}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1340"
+   LastUpgradeVersion = "1410"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "829D28132891856700E23152"
+               BlueprintIdentifier = "82B240E829361ECB003F7DCD"
                BuildableName = "Callisto.app"
                BlueprintName = "Callisto"
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "829D28132891856700E23152"
+            BlueprintIdentifier = "82B240E829361ECB003F7DCD"
             BuildableName = "Callisto.app"
             BlueprintName = "Callisto"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "829D28132891856700E23152"
+            BlueprintIdentifier = "82B240E829361ECB003F7DCD"
             BuildableName = "Callisto.app"
             BlueprintName = "Callisto"
             ReferencedContainer = "container:RocketChatRN.xcodeproj">

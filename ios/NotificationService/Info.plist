@@ -26,6 +26,8 @@
 	<false/>
 	<key>KeychainGroup</key>
 	<string>$(AppIdentifierPrefix)com.joviandigital.callisto</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>

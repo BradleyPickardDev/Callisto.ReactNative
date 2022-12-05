@@ -35,6 +35,20 @@
                ReferencedContainer = "container:RocketChatRN.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "82B240E829361ECB003F7DCD"
+               BuildableName = "Callisto.app"
+               BlueprintName = "Callisto"
+               ReferencedContainer = "container:RocketChatRN.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

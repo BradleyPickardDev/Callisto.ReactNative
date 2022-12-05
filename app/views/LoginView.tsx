@@ -15,6 +15,7 @@ import I18n from '../i18n';
 import { OutsideParamList } from '../stacks/types';
 import { withTheme } from '../theme';
 import sharedStyles from './Styles';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	registerDisabled: {
@@ -73,7 +74,7 @@ class LoginView extends React.Component<ILoginViewProps, ILoginViewState> {
 	private passwordInput: RNTextInput | null | undefined;
 
 	static navigationOptions = ({ route, navigation }: ILoginViewProps) => ({
-		title: route?.params?.title ?? 'Rocket.Chat',
+		title: route?.params?.title ?? whiteLabelConfig.CLIENT_NAME,
 		headerRight: () => <HeaderButton.Legal testID='login-view-more' navigation={navigation} />
 	});
 
@@ -169,7 +170,7 @@ class LoginView extends React.Component<ILoginViewProps, ILoginViewState> {
 					}}
 					testID='login-view-email'
 					textContentType='username'
-					autoCompleteType='username'
+					autoComplete='username'
 					value={user}
 				/>
 				<FormTextInput
@@ -185,7 +186,7 @@ class LoginView extends React.Component<ILoginViewProps, ILoginViewState> {
 					onChangeText={(value: string) => this.setState({ password: value })}
 					testID='login-view-password'
 					textContentType='password'
-					autoCompleteType='password'
+					autoComplete='password'
 				/>
 				<Button
 					title={I18n.t('Login')}
@@ -214,7 +215,8 @@ class LoginView extends React.Component<ILoginViewProps, ILoginViewState> {
 						<Text
 							style={[styles.bottomContainerTextBold, { color: themes[theme].actionTintColor }]}
 							onPress={this.register}
-							testID='login-view-register'>
+							testID='login-view-register'
+						>
 							{I18n.t('Create_account')}
 						</Text>
 					</View>

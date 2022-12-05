@@ -68,6 +68,7 @@ export type ChatsStackParamList = {
 		rid: string;
 		t: SubscriptionType;
 		showCloseModal?: boolean;
+		fromRid?: string;
 	};
 	RoomInfoEditView: {
 		rid: string;
@@ -75,6 +76,7 @@ export type ChatsStackParamList = {
 	RoomMembersView: {
 		rid: string;
 		room: ISubscription;
+		joined?: boolean;
 	};
 	DiscussionsView: {
 		rid: string;

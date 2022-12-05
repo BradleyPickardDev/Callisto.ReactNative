@@ -9,17 +9,18 @@ import styles, { ROW_HEIGHT } from './styles';
 import { themes } from '../../lib/constants';
 import { isIOS } from '../../lib/methods/helpers';
 import { useTheme } from '../../theme';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 export { ROW_HEIGHT };
 
-interface IServerItem {
+export interface IServerItem {
 	item: IServerInfo;
 	onPress(): void;
 	onLongPress?(): void;
 	hasCheck?: boolean;
 }
 
-const defaultLogo = require('../../static/images/logo.png');
+const defaultLogo = whiteLabelConfig.APP_LOGO_PATH;
 
 const ServerItem = React.memo(({ item, onPress, onLongPress, hasCheck }: IServerItem) => {
 	const { theme } = useTheme();
@@ -31,7 +32,8 @@ const ServerItem = React.memo(({ item, onPress, onLongPress, hasCheck }: IServer
 			android_ripple={{ color: themes[theme].bannerBackground }}
 			style={({ pressed }: { pressed: boolean }) => ({
 				backgroundColor: isIOS && pressed ? themes[theme].bannerBackground : themes[theme].backgroundColor
-			})}>
+			})}
+		>
 			<View style={styles.serverItemContainer}>
 				{item.iconURL ? (
 					<FastImage
@@ -40,12 +42,12 @@ const ServerItem = React.memo(({ item, onPress, onLongPress, hasCheck }: IServer
 							priority: FastImage.priority.high
 						}}
 						// @ts-ignore TODO: Remove when updating FastImage
-						defaultSource={defaultLogo}
+						defaultSource={{ uri: defaultLogo }}
 						style={styles.serverIcon}
 						onError={() => console.log('err_loading_server_icon')}
 					/>
 				) : (
-					<FastImage source={defaultLogo} style={styles.serverIcon} />
+					<FastImage source={{ uri: defaultLogo }} style={styles.serverIcon} />
 				)}
 				<View style={styles.serverTextContainer}>
 					<Text numberOfLines={1} style={[styles.serverName, { color: themes[theme].titleText }]}>

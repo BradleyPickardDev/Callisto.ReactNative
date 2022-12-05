@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  RocketChatRN
+
+  Created by Abdul Rahman Majeed on 28/07/2022.
+  Copyright © 2022 Facebook. All rights reserved.
+*/
+"clientName" = "Sh*ftTalk!";
+"strJovianApp" = "Sh*ftTalk!";
+"strServerUrlPlaceholder" = "Ex. chat.holyshift.studio";
+"strStoreApplicationId" = "1640102843";
+"strContactUsEmail" = "corey@holyshift.studio";
