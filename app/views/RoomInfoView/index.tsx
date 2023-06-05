@@ -1,43 +1,43 @@
+import { CompositeNavigationProp, RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import isEmpty from 'lodash/isEmpty';
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { connect } from 'react-redux';
-import UAParser from 'ua-parser-js';
-import isEmpty from 'lodash/isEmpty';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { CompositeNavigationProp, RouteProp } from '@react-navigation/native';
 import { Observable, Subscription } from 'rxjs';
+import UAParser from 'ua-parser-js';
 
+import { AvatarWithEdit } from '../../containers/Avatar';
 import { CustomIcon, TIconsName } from '../../containers/CustomIcon';
-import Status from '../../containers/Status';
-import Avatar from '../../containers/Avatar';
-import sharedStyles from '../Styles';
-import RoomTypeIcon from '../../containers/RoomTypeIcon';
-import I18n from '../../i18n';
 import * as HeaderButton from '../../containers/HeaderButton';
-import StatusBar from '../../containers/StatusBar';
-import log, { events, logEvent } from '../../lib/methods/helpers/log';
-import { themes } from '../../lib/constants';
-import { TSupportedThemes, withTheme } from '../../theme';
 import { MarkdownPreview } from '../../containers/markdown';
-import { LISTENER } from '../../containers/Toast';
-import EventEmitter from '../../lib/methods/helpers/events';
+import RoomTypeIcon from '../../containers/RoomTypeIcon';
 import SafeAreaView from '../../containers/SafeAreaView';
-import { goRoom } from '../../lib/methods/helpers/goRoom';
-import Navigation from '../../lib/navigation/appNavigation';
-import Livechat from './Livechat';
-import Channel from './Channel';
-import Direct from './Direct';
-import styles from './styles';
-import { ChatsStackParamList } from '../../stacks/types';
-import { MasterDetailInsideStackParamList } from '../../stacks/MasterDetailStack/types';
-import { SubscriptionType, TSubscriptionModel, ISubscription, IUser, IApplicationState } from '../../definitions';
+import Status from '../../containers/Status';
+import StatusBar from '../../containers/StatusBar';
+import { LISTENER } from '../../containers/Toast';
+import { IApplicationState, ISubscription, IUser, SubscriptionType, TSubscriptionModel } from '../../definitions';
 import { ILivechatVisitor } from '../../definitions/ILivechatVisitor';
-import { callJitsi } from '../../lib/methods';
-import { getRoomTitle, getUidDirectMessage, hasPermission } from '../../lib/methods/helpers';
-import { Services } from '../../lib/services';
+import I18n from '../../i18n';
+import { themes } from '../../lib/constants';
 import { getSubscriptionByRoomId } from '../../lib/database/services/Subscription';
+import { getRoomTitle, getUidDirectMessage, hasPermission } from '../../lib/methods/helpers';
+import EventEmitter from '../../lib/methods/helpers/events';
+import { goRoom } from '../../lib/methods/helpers/goRoom';
 import { handleIgnore } from '../../lib/methods/helpers/handleIgnore';
+import log, { events, logEvent } from '../../lib/methods/helpers/log';
+import Navigation from '../../lib/navigation/appNavigation';
+import { Services } from '../../lib/services';
+import { MasterDetailInsideStackParamList } from '../../stacks/MasterDetailStack/types';
+import { ChatsStackParamList } from '../../stacks/types';
+import { TSupportedThemes, withTheme } from '../../theme';
+import sharedStyles from '../Styles';
+import Channel from './Channel';
+import { CallButton } from './components/UserInfoButton';
+import Direct from './Direct';
+import Livechat from './Livechat';
+import styles from './styles';
 
 interface IGetRoomTitle {
 	room: ISubscription;
@@ -87,7 +87,7 @@ interface IRoomInfoViewProps {
 		StackNavigationProp<MasterDetailInsideStackParamList>
 	>;
 	route: RouteProp<ChatsStackParamList, 'RoomInfoView'>;
-	rooms: string[];
+	subscribedRoom: string;
 	theme: TSupportedThemes;
 	isMasterDetail: boolean;
 	jitsiEnabled: boolean;
@@ -353,7 +353,7 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 	goRoom = () => {
 		logEvent(events.RI_GO_ROOM_USER);
 		const { room } = this.state;
-		const { rooms, navigation, isMasterDetail } = this.props;
+		const { navigation, isMasterDetail, subscribedRoom } = this.props;
 		const params = {
 			rid: room.rid,
 			name: getRoomTitle(room),
@@ -362,18 +362,14 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 		};
 
 		if (room.rid) {
-			// if it's on master detail layout, we close the modal and replace RoomView
-			if (isMasterDetail) {
-				Navigation.navigate('DrawerNavigator');
-				goRoom({ item: params, isMasterDetail });
-			} else {
-				let navigate = navigation.push;
-				// if this is a room focused
-				if (rooms.includes(room.rid)) {
-					({ navigate } = navigation);
+			if (room.rid === subscribedRoom) {
+				if (isMasterDetail) {
+					return Navigation.navigate('DrawerNavigator');
 				}
-				navigate('RoomView', params);
+				return navigation.goBack();
 			}
+			// if it's on master detail layout, we close the modal and replace RoomView
+			goRoom({ item: params, isMasterDetail, popToRoot: true });
 		}
 	};
 
@@ -390,11 +386,6 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 		}
 	};
 
-	videoCall = () => {
-		const { room } = this.state;
-		callJitsi(room);
-	};
-
 	handleBlockUser = async (rid: string, blocked: string, block: boolean) => {
 		logEvent(events.RI_TOGGLE_BLOCK_USER);
 		try {
@@ -403,17 +394,32 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 			log(e);
 		}
 	};
+
+	handleEditAvatar = () => {
+		const { navigation } = this.props;
+		const { room } = this.state;
+		navigation.navigate('ChangeAvatarView', { titleHeader: I18n.t('Room_Info'), room, t: this.t, context: 'room' });
+	};
+
 	renderAvatar = (room: ISubscription, roomUser: IUserParsed) => {
 		const { theme } = this.props;
+		const { showEdit } = this.state;
+		const showAvatarEdit = showEdit && this.t !== SubscriptionType.OMNICHANNEL;
 
 		return (
-			<Avatar text={room.name || roomUser.username} style={styles.avatar} type={this.t} size={100} rid={room?.rid}>
+			<AvatarWithEdit
+				text={room.name || roomUser.username}
+				style={styles.avatar}
+				type={this.t}
+				rid={room?.rid}
+				handleEdit={showAvatarEdit ? this.handleEditAvatar : undefined}
+			>
 				{this.t === SubscriptionType.DIRECT && roomUser._id ? (
 					<View style={[sharedStyles.status, { backgroundColor: themes[theme].auxiliaryBackground }]}>
 						<Status size={20} id={roomUser._id} />
 					</View>
 				) : null}
-			</Avatar>
+			</AvatarWithEdit>
 		);
 	};
 
@@ -429,8 +435,7 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 	};
 
 	renderButtons = () => {
-		const { roomFromRid, roomUser } = this.state;
-		const { jitsiEnabled } = this.props;
+		const { roomFromRid, roomUser, room } = this.state;
 
 		const isFromDm = roomFromRid?.rid ? new RegExp(roomUser._id).test(roomFromRid.rid) : false;
 		const isDirectFromSaved = this.isDirect && this.fromRid && roomFromRid;
@@ -446,9 +451,7 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 		return (
 			<View style={styles.roomButtonsContainer}>
 				{this.renderButton(() => this.handleCreateDirectMessage(this.goRoom), 'message', I18n.t('Message'))}
-				{jitsiEnabled && this.isDirect
-					? this.renderButton(() => this.handleCreateDirectMessage(this.videoCall), 'camera', I18n.t('Video_call'))
-					: null}
+				<CallButton isDirect={this.isDirect} rid={room.rid} />
 				{isDirectFromSaved && !isFromDm && !isDmWithMyself
 					? this.renderButton(
 							() => handleIgnore(roomUser._id, !isIgnored, roomFromRid.rid),
@@ -513,7 +516,7 @@ class RoomInfoView extends React.Component<IRoomInfoViewProps, IRoomInfoViewStat
 }
 
 const mapStateToProps = (state: IApplicationState) => ({
-	rooms: state.room.rooms,
+	subscribedRoom: state.room.subscribedRoom,
 	isMasterDetail: state.app.isMasterDetail,
 	jitsiEnabled: (state.settings.Jitsi_Enabled as boolean) || false,
 	editRoomPermission: state.permissions['edit-room'],

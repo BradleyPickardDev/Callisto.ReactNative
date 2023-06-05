@@ -33,7 +33,6 @@ interface IMarkdownProps {
 	md?: MarkdownAST;
 	mentions?: IUserMention[];
 	getCustomEmoji?: TGetCustomEmoji;
-	baseUrl?: string;
 	username?: string;
 	tmid?: string;
 	numberOfLines?: number;
@@ -46,6 +45,7 @@ interface IMarkdownProps {
 	testID?: string;
 	style?: StyleProp<TextStyle>[];
 	onLinkPress?: TOnLinkPress;
+	isTranslated?: boolean;
 }
 
 type TLiteral = {
@@ -94,9 +94,7 @@ class Markdown extends PureComponent<IMarkdownProps, any> {
 
 	constructor(props: IMarkdownProps) {
 		super(props);
-		if (!this.isNewMarkdown) {
-			this.renderer = this.createRenderer();
-		}
+		this.renderer = this.createRenderer();
 	}
 
 	createRenderer = () =>
@@ -142,10 +140,10 @@ class Markdown extends PureComponent<IMarkdownProps, any> {
 	}
 
 	renderText = ({ context, literal }: { context: []; literal: string }) => {
-		const { numberOfLines, style = [] } = this.props;
+		const { numberOfLines } = this.props;
 		const defaultStyle = [this.isMessageContainsOnlyEmoji ? styles.textBig : {}, ...context.map(type => styles[type])];
 		return (
-			<Text accessibilityLabel={literal} style={[styles.text, defaultStyle, ...style]} numberOfLines={numberOfLines}>
+			<Text accessibilityLabel={literal} style={[styles.text, defaultStyle]} numberOfLines={numberOfLines}>
 				{literal}
 			</Text>
 		);
@@ -195,12 +193,12 @@ class Markdown extends PureComponent<IMarkdownProps, any> {
 	};
 
 	renderParagraph = ({ children }: any) => {
-		const { numberOfLines, style, theme } = this.props;
+		const { numberOfLines, style = [], theme } = this.props;
 		if (!children || children.length === 0) {
 			return null;
 		}
 		return (
-			<Text style={[styles.text, style, { color: themes[theme!].bodyText }]} numberOfLines={numberOfLines}>
+			<Text style={[styles.text, { color: themes[theme!].bodyText }, ...style]} numberOfLines={numberOfLines}>
 				{children}
 			</Text>
 		);
@@ -235,13 +233,12 @@ class Markdown extends PureComponent<IMarkdownProps, any> {
 	};
 
 	renderEmoji = ({ literal }: TLiteral) => {
-		const { getCustomEmoji, baseUrl = '', customEmojis, style } = this.props;
+		const { getCustomEmoji, customEmojis, style } = this.props;
 		return (
 			<MarkdownEmoji
 				literal={literal}
 				isMessageContainsOnlyEmoji={this.isMessageContainsOnlyEmoji}
 				getCustomEmoji={getCustomEmoji}
-				baseUrl={baseUrl}
 				customEmojis={customEmojis}
 				style={style}
 			/>
@@ -321,19 +318,18 @@ class Markdown extends PureComponent<IMarkdownProps, any> {
 			useRealName,
 			username = '',
 			getCustomEmoji,
-			baseUrl = '',
-			onLinkPress
+			onLinkPress,
+			isTranslated
 		} = this.props;
 
 		if (!msg) {
 			return null;
 		}
 
-		if (this.isNewMarkdown) {
+		if (this.isNewMarkdown && !isTranslated) {
 			return (
 				<NewMarkdown
 					username={username}
-					baseUrl={baseUrl}
 					getCustomEmoji={getCustomEmoji}
 					useRealName={useRealName}
 					tokens={md}

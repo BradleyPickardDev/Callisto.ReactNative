@@ -22,7 +22,7 @@ import { sanitizeLikeString } from '../../lib/database/utils';
 import UserPreferences from '../../lib/methods/userPreferences';
 import { OutsideParamList } from '../../stacks/types';
 import { withTheme } from '../../theme';
-import { isTablet } from '../../lib/methods/helpers';
+import { isIOS, isTablet } from '../../lib/methods/helpers';
 import EventEmitter from '../../lib/methods/helpers/events';
 import { BASIC_AUTH_KEY, setBasicAuth } from '../../lib/methods/helpers/fetch';
 import { showConfirmationAlert } from '../../lib/methods/helpers/info';
@@ -116,12 +116,21 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 		}
 	}
 
+	componentDidUpdate(prevProps: Readonly<INewServerViewProps>) {
+		if (prevProps.connecting !== this.props.connecting) {
+			this.setHeader();
+		}
+	}
+
 	setHeader = () => {
-		const { previousServer, navigation } = this.props;
+		const { previousServer, navigation, connecting } = this.props;
 		if (previousServer) {
 			return navigation.setOptions({
 				headerTitle: I18n.t('Workspaces'),
-				headerLeft: () => <HeaderButton.CloseModal navigation={navigation} onPress={this.close} testID='new-server-view-close' />
+				headerLeft: () =>
+					!connecting ? (
+						<HeaderButton.CloseModal navigation={navigation} onPress={this.close} testID='new-server-view-close' />
+					) : null
 			});
 		}
 
@@ -162,6 +171,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 
 	close = () => {
 		const { dispatch, previousServer } = this.props;
+
 		dispatch(inviteLinksClear());
 		if (previousServer) {
 			dispatch(selectServerRequest(previousServer));
@@ -382,28 +392,32 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 						style={[styles.connectButton, { marginTop: verticalScale({ size: 16, height }) }]}
 						testID='new-server-view-button'
 					/>
-					<OrSeparator theme={theme} />
-					<Text
-						style={[
-							styles.description,
-							{
-								color: themes[theme].auxiliaryText,
-								fontSize: moderateScale({ size: 14, width }),
-								marginBottom: verticalScale({ size: 16, height })
-							}
-						]}
-					>
-						{I18n.t('Onboarding_join_open_description')}
-					</Text>
-					<Button
-						title={I18n.t('Join_our_open_workspace')}
-						type='secondary'
-						backgroundColor={themes[theme].chatComponentBackground}
-						onPress={this.connectOpen}
-						disabled={connecting}
-						loading={connectingOpen && connecting}
-						testID='new-server-view-open'
-					/>
+					{isIOS ? (
+						<>
+							<OrSeparator theme={theme} />
+							<Text
+								style={[
+									styles.description,
+									{
+										color: themes[theme].auxiliaryText,
+										fontSize: moderateScale({ size: 14, width }),
+										marginBottom: verticalScale({ size: 16, height })
+									}
+								]}
+							>
+								{I18n.t('Onboarding_join_open_description')}
+							</Text>
+							<Button
+								title={I18n.t('Join_our_open_workspace')}
+								type='secondary'
+								backgroundColor={themes[theme].chatComponentBackground}
+								onPress={this.connectOpen}
+								disabled={connecting}
+								loading={connectingOpen && connecting}
+								testID='new-server-view-open'
+							/>
+						</>
+					) : null}
 				</FormContainerInner>
 				{this.renderCertificatePicker()}
 			</FormContainer>

@@ -1,7 +1,7 @@
 import { appSchema, tableSchema } from '@nozbe/watermelondb';
 
 export default appSchema({
-	version: 18,
+	version: 21,
 	tables: [
 		tableSchema({
 			name: 'subscriptions',
@@ -55,6 +55,7 @@ export default appSchema({
 				{ name: 'livechat_data', type: 'string', isOptional: true },
 				{ name: 'tags', type: 'string', isOptional: true },
 				{ name: 'e2e_key', type: 'string', isOptional: true },
+				{ name: 'e2e_suggested_key', type: 'string', isOptional: true },
 				{ name: 'encrypted', type: 'boolean', isOptional: true },
 				{ name: 'e2e_key_id', type: 'string', isOptional: true },
 				{ name: 'avatar_etag', type: 'string', isOptional: true },
@@ -62,7 +63,8 @@ export default appSchema({
 				{ name: 'team_main', type: 'boolean', isOptional: true }, // Use `Q.notEq(true)` to get false or null
 				{ name: 'on_hold', type: 'boolean', isOptional: true },
 				{ name: 'source', type: 'string', isOptional: true },
-				{ name: 'hide_mention_status', type: 'boolean', isOptional: true }
+				{ name: 'hide_mention_status', type: 'boolean', isOptional: true },
+				{ name: 'users_count', type: 'number', isOptional: true }
 			]
 		}),
 		tableSchema({
@@ -222,6 +224,7 @@ export default appSchema({
 				{ name: 'path', type: 'string', isOptional: true },
 				{ name: 'rid', type: 'string', isIndexed: true },
 				{ name: 'name', type: 'string', isOptional: true },
+				{ name: 'tmid', type: 'string', isOptional: true },
 				{ name: 'description', type: 'string', isOptional: true },
 				{ name: 'size', type: 'number' },
 				{ name: 'type', type: 'string', isOptional: true },
