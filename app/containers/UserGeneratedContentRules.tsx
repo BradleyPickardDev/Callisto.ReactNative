@@ -6,6 +6,7 @@ import { useTheme } from '../theme';
 import openLink from '../lib/methods/helpers/openLink';
 import { useAppSelector } from '../lib/hooks';
 import I18n from '../i18n';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	bottomContainer: {
@@ -41,7 +42,7 @@ const UGCRules = ({ styleContainer }: { styleContainer?: ViewStyle }) => {
 	return (
 		<View style={[styles.bottomContainer, styleContainer]}>
 			<Text style={[styles.bottomContainerText, { color: colors.auxiliaryText }]}>
-				{`${I18n.t('Onboarding_agree_terms')}\n`}
+				{`${I18n.t('Onboarding_agree_terms', { clientName: whiteLabelConfig.CLIENT_NAME })}\n`}
 				<Text
 					style={[styles.bottomContainerTextBold, { color: colors.actionTintColor }]}
 					onPress={() => openContract('terms-of-service')}

@@ -9,6 +9,7 @@ import styles, { ROW_HEIGHT } from './styles';
 import { themes } from '../../lib/constants';
 import { isIOS } from '../../lib/methods/helpers';
 import { useTheme } from '../../theme';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 export { ROW_HEIGHT };
 
@@ -19,7 +20,7 @@ export interface IServerItem {
 	hasCheck?: boolean;
 }
 
-const defaultLogo = require('../../static/images/logo.png');
+const defaultLogo = whiteLabelConfig.APP_LOGO_PATH;
 
 const ServerItem = React.memo(({ item, onPress, onLongPress, hasCheck }: IServerItem) => {
 	const { theme } = useTheme();

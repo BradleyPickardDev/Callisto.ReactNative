@@ -20,6 +20,7 @@ import log, { events, logEvent } from '../lib/methods/helpers/log';
 import sharedStyles from './Styles';
 import { Services } from '../lib/services';
 import UGCRules from '../containers/UserGeneratedContentRules';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	title: {
@@ -68,7 +69,7 @@ class RegisterView extends React.Component<IProps, any> {
 	private avatarUrl?: RNTextInput | null;
 
 	static navigationOptions = ({ route, navigation }: IProps) => ({
-		title: route?.params?.title ?? 'Rocket.Chat',
+		title: route?.params?.title ?? whiteLabelConfig.CLIENT_NAME,
 		headerRight: () => <HeaderButton.Legal testID='register-view-more' navigation={navigation} />
 	});
 

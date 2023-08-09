@@ -24,6 +24,7 @@ import sharedStyles from './Styles';
 import { IApplicationState, IBaseScreen, IUser } from '../definitions';
 import { Services } from '../lib/services';
 import { SettingsStackParamList } from '../stacks/types';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	container: {
@@ -170,7 +171,10 @@ class E2EEncryptionSecurityView extends React.Component<IE2EEncryptionSecurityVi
 								{I18n.t('E2E_encryption_reset_title')}
 							</Text>
 							<Text style={[styles.description, { color: themes[theme].bodyText }]}>
-								{I18n.t('E2E_encryption_reset_description')}
+								{I18n.t('E2E_encryption_reset_description', {
+									clientName: whiteLabelConfig.CLIENT_NAME,
+									clientName2: whiteLabelConfig.CLIENT_NAME
+								})}
 							</Text>
 							<Button
 								onPress={this.resetOwnKey}

@@ -15,6 +15,7 @@ import { IAssetsFavicon512 } from '../../definitions/IAssetsFavicon512';
 import { getShowLoginButton } from '../../selectors/login';
 import ServerAvatar from './ServerAvatar';
 import styles from './styles';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 interface IWorkSpaceProp {
 	navigation: CompositeNavigationProp<
@@ -35,7 +36,7 @@ interface IWorkSpaceProp {
 
 class WorkspaceView extends React.Component<IWorkSpaceProp, any> {
 	static navigationOptions = (): StackNavigationOptions => ({
-		title: I18n.t('Your_workspace')
+		title: whiteLabelConfig.CLIENT_NAME
 	});
 
 	get showRegistrationButton() {

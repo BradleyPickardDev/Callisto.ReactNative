@@ -32,6 +32,7 @@ import SSLPinning from '../../lib/methods/helpers/sslPinning';
 import sharedStyles from '../Styles';
 import ServerInput from './ServerInput';
 import { serializeAsciiUrl } from '../../lib/methods';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	onboardingImage: {
@@ -347,7 +348,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 								height: verticalScale({ size: 100, height })
 							}
 						]}
-						source={require('../../static/images/logo.png')}
+						source={{ uri: whiteLabelConfig.APP_LOGO_PATH }}
 						fadeDuration={0}
 					/>
 					<Text
@@ -360,7 +361,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 							}
 						]}
 					>
-						Rocket.Chat
+						{whiteLabelConfig.APP_NAME}
 					</Text>
 					<Text
 						style={[
@@ -372,7 +373,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 							}
 						]}
 					>
-						{I18n.t('Onboarding_subtitle')}
+						
 					</Text>
 					<ServerInput
 						text={text}
@@ -392,34 +393,7 @@ class NewServerView extends React.Component<INewServerViewProps, INewServerViewS
 						style={[styles.connectButton, { marginTop: verticalScale({ size: 16, height }) }]}
 						testID='new-server-view-button'
 					/>
-					{isIOS ? (
-						<>
-							<OrSeparator theme={theme} />
-							<Text
-								style={[
-									styles.description,
-									{
-										color: themes[theme].auxiliaryText,
-										fontSize: moderateScale({ size: 14, width }),
-										marginBottom: verticalScale({ size: 16, height })
-									}
-								]}
-							>
-								{I18n.t('Onboarding_join_open_description')}
-							</Text>
-							<Button
-								title={I18n.t('Join_our_open_workspace')}
-								type='secondary'
-								backgroundColor={themes[theme].chatComponentBackground}
-								onPress={this.connectOpen}
-								disabled={connecting}
-								loading={connectingOpen && connecting}
-								testID='new-server-view-open'
-							/>
-						</>
-					) : null}
 				</FormContainerInner>
-				{this.renderCertificatePicker()}
 			</FormContainer>
 		);
 	}

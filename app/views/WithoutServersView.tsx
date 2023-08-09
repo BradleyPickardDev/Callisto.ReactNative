@@ -7,6 +7,7 @@ import * as HeaderButton from '../containers/HeaderButton';
 import I18n from '../i18n';
 import { useTheme } from '../theme';
 import sharedStyles from './Styles';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	container: {
@@ -32,7 +33,7 @@ const WithoutServerView = (): React.ReactElement => {
 
 	useLayoutEffect(() => {
 		navigation.setOptions({
-			title: 'Rocket.Chat',
+			title: whiteLabelConfig.CLIENT_NAME,
 			headerLeft: () => <HeaderButton.CancelModal onPress={ShareExtension.close} testID='share-extension-close' />
 		});
 	}, [navigation]);
@@ -41,7 +42,9 @@ const WithoutServerView = (): React.ReactElement => {
 		<View style={[styles.container, { backgroundColor: colors.backgroundColor }]}>
 			<Text style={[styles.title, { color: colors.titleText }]}>{I18n.t('Without_Servers')}</Text>
 			<Text style={[styles.content, { color: colors.titleText }]}>
-				{I18n.t('You_need_to_access_at_least_one_RocketChat_server_to_share_something')}
+				{I18n.t('You_need_to_access_at_least_one_RocketChat_server_to_share_something', {
+					clientName: whiteLabelConfig.CLIENT_NAME
+				})}
 			</Text>
 		</View>
 	);

@@ -16,6 +16,7 @@ import { OutsideParamList } from '../stacks/types';
 import { withTheme } from '../theme';
 import sharedStyles from './Styles';
 import UGCRules from '../containers/UserGeneratedContentRules';
+import whiteLabelConfig from '../whitelabel/whiteLabelConfig';
 
 const styles = StyleSheet.create({
 	registerDisabled: {
@@ -76,7 +77,7 @@ class LoginView extends React.Component<ILoginViewProps, ILoginViewState> {
 	private passwordInput: RNTextInput | null | undefined;
 
 	static navigationOptions = ({ route, navigation }: ILoginViewProps) => ({
-		title: route?.params?.title ?? 'Rocket.Chat',
+		title: route?.params?.title ?? whiteLabelConfig.CLIENT_NAME,
 		headerRight: () => <HeaderButton.Legal testID='login-view-more' navigation={navigation} />
 	});
 

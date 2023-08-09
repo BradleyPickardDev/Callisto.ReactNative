@@ -507,7 +507,7 @@
   "Welcome": "ようこそ",
   "Whats_your_2fa": "2段階認証のコードを入力してください",
   "Without_Servers": "サーバーを除く",
-  "Write_External_Permission_Message": "Rocket.Chatは画像を保存するためにギャラリーへのアクセスを求めています。",
+  "Write_External_Permission_Message": "{{clientName}}は画像を保存するためにギャラリーへのアクセスを求めています。",
   "Write_External_Permission": "ギャラリーへのアクセス許可",
   "Yes_action_it": "はい、{{action}}します！",
   "Yesterday": "昨日",

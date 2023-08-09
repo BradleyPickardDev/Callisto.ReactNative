@@ -13,6 +13,7 @@ import Animated, {
 
 import { useTheme } from '../../theme';
 import EventEmitter from '../../lib/methods/helpers/events';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 const LOADING_EVENT = 'LOADING_EVENT';
 export const LOADING_TEST_ID = 'loading';
@@ -115,7 +116,7 @@ const Loading = (): React.ReactElement | null => {
 						]}
 					/>
 					<Animated.Image
-						source={require('../../static/images/logo.png')}
+						source={{ uri: whiteLabelConfig.APP_LOGO_PATH }}
 						style={[styles.image, animatedScale]}
 						testID={LOADING_IMAGE_TEST_ID}
 					/>

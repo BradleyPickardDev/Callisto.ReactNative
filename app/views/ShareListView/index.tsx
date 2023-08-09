@@ -25,6 +25,7 @@ import ShareListHeader from './Header';
 import { TServerModel, TSubscriptionModel } from '../../definitions';
 import { ShareInsideStackParamList } from '../../definitions/navigationTypes';
 import { getRoomAvatar, isAndroid, isIOS } from '../../lib/methods/helpers';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 interface IDataFromShare {
 	value: string;
@@ -65,7 +66,7 @@ interface IShareListViewProps extends INavigationOption {
 
 const permission: Rationale = {
 	title: I18n.t('Read_External_Permission'),
-	message: I18n.t('Read_External_Permission_Message'),
+	message: I18n.t('Read_External_Permission_Message', { clientName: whiteLabelConfig.CLIENT_NAME }),
 	buttonPositive: 'Ok'
 };
 

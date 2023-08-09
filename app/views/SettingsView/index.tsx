@@ -33,6 +33,7 @@ import { getUserSelector } from '../../selectors/login';
 import { SettingsStackParamList } from '../../stacks/types';
 import { useTheme } from '../../theme';
 import SidebarView from '../SidebarView';
+import whiteLabelConfig from '../../whitelabel/whiteLabelConfig';
 
 type TLogScreenName = 'SE_GO_LANGUAGE' | 'SE_GO_DEFAULTBROWSER' | 'SE_GO_THEME' | 'SE_GO_PROFILE' | 'SE_GO_SECURITYPRIVACY';
 
@@ -117,8 +118,8 @@ const SettingsView = (): React.ReactElement => {
 
 	const sendEmail = async () => {
 		logEvent(events.SE_CONTACT_US);
-		const subject = encodeURI('Rocket.Chat Mobile App Support');
-		const email = encodeURI('support@rocket.chat');
+		const subject = encodeURI(`${whiteLabelConfig.CLIENT_NAME} Mobile App Support`);
+		const email = encodeURI(whiteLabelConfig.CONTACT_US_EMAIL);
 		const description = encodeURI(`
 			version: ${getReadableVersion}
 			device: ${getDeviceModel}
@@ -127,7 +128,7 @@ const SettingsView = (): React.ReactElement => {
 			await Linking.openURL(`mailto:${email}?subject=${subject}&body=${description}`);
 		} catch (e) {
 			logEvent(events.SE_CONTACT_US_F);
-			showErrorAlert(I18n.t('error-email-send-failed', { message: 'support@rocket.chat' }));
+			showErrorAlert(I18n.t('error-email-send-failed', { message: whiteLabelConfig.CONTACT_US_EMAIL }));
 		}
 	};
 

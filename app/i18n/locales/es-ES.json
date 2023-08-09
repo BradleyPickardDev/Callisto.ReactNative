@@ -405,7 +405,7 @@
   "you_were_mentioned": "has sido mencionado",
   "you": "tú",
   "You": "Tú",
-  "You_need_to_access_at_least_one_RocketChat_server_to_share_something": "Necesita acceder al menos a un servidor Rocket.Chat para compartir algo.",
+  "You_need_to_access_at_least_one_RocketChat_server_to_share_something": "Necesita acceder al menos a un servidor {{clientName}} para compartir algo.",
   "Your_certificate": "Tu certificado",
   "Version_no": "Versión: {{version}}",
   "You_will_not_be_able_to_recover_this_message": "¡No podrás recuperar este mensaje!",
