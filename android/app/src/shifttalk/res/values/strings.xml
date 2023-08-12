@@ -3,4 +3,5 @@
     <string name="client_name" translatable="false">Sh*ftTalk!</string>
     <string name="str_jovian_app" translatable="false">Sh*ftTalk!</string>
     <string name="str_server_url_placeholder" translatable="false">Ex. chat.holyshift.studio</string>
+    <string name="share_extension_name" translatable="false">com.joviandigital.callisto</string>
 </resources>

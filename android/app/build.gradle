@@ -275,16 +275,32 @@ android {
     }
 
     // applicationVariants are e.g. debug, release
-
-    flavorDimensions "app", "type"
+    flavorDimensions.add("target")
+    flavorDimensions.add("type")
     productFlavors {
-        official {
-            dimension = "app"
+        callisto {
+            dimension = "target"
             buildConfigField "boolean", "IS_OFFICIAL", "true"
+            applicationId 'com.joviandigital.callisto'
+            versionCode 4
+            versionName "1.0.1"
+            manifestPlaceholders = [BugsnagAPIKey: "3736ac3ba68c4b46c95e495155810fa7"]
+        }
+        shifttalk {
+            dimension = "target"
+            buildConfigField "boolean", "IS_OFFICIAL", "true"
+            applicationId 'chat.holyshift.studio'
+            versionCode 3
+            versionName "1.0.1"
+            manifestPlaceholders = [BugsnagAPIKey: "ab055792bac31c25aa4bb493ccc91a57"]
         }
         experimental {
-            dimension = "app"
+            dimension = "target"
             buildConfigField "boolean", "IS_OFFICIAL", "false"
+        }
+        official {
+            dimension = "target"
+            buildConfigField "boolean", "IS_OFFICIAL", "true"
         }
         foss {
             dimension = "type"
@@ -294,25 +310,26 @@ android {
             dimension = "type"
             buildConfigField "boolean", "FDROID_BUILD", "false"
         }
-        callisto {
-            dimension = "app"
-            buildConfigField "boolean", "IS_OFFICIAL", "true"
-            applicationId 'com.joviandigital.callisto'
-            versionCode 4
-            versionName "1.0.1"
-            manifestPlaceholders = [BugsnagAPIKey: "3736ac3ba68c4b46c95e495155810fa7"]
-        }
-        shifttalk {
-            dimension = "app"
-            buildConfigField "boolean", "IS_OFFICIAL", "true"
-            applicationId 'chat.holyshift.studio'
-            versionCode 3
-            versionName "1.0.1"
-            manifestPlaceholders = [BugsnagAPIKey: "ab055792bac31c25aa4bb493ccc91a57"]
-        }
     }
+
     sourceSets {
         // TODO: refactor making sure notifications are working properly both on debug and release
+        shifttalkPlayDebug {
+            java.srcDirs = ['src/main/java', 'src/play/java']
+            manifest.srcFile 'src/play/AndroidManifest.xml'
+        }
+        shifttalkPlayRelease {
+            java.srcDirs = ['src/main/java', 'src/play/java']
+            manifest.srcFile 'src/play/AndroidManifest.xml'
+        }
+        callistoPlayDebug {
+            java.srcDirs = ['src/main/java', 'src/play/java']
+            manifest.srcFile 'src/play/AndroidManifest.xml'
+        }
+        callistoPlayRelease {
+            java.srcDirs = ['src/main/java', 'src/play/java']
+            manifest.srcFile 'src/play/AndroidManifest.xml'
+        }
         experimentalPlayDebug {
             java.srcDirs = ['src/main/java', 'src/play/java']
             manifest.srcFile 'src/play/AndroidManifest.xml'
